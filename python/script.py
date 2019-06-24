@@ -7,9 +7,9 @@ import util
 import classes
 
 # Regex patterns for user declarations.
-_VAR_PATTERN = "\s*(?:export(?:\(.*\)\s+)?)?var\s+(\w+)"
-_CONST_PATTERN = "\s*const\s+(\w+)\s*=\s*(.+)"
-_FUNC_PATTERN = "\s*(static\s+)?func\s+(\w+)\(((\w|,|\s)*)\):"
+_VAR_PATTERN = "\s*(?:export(?:\(.*\)\s+)?)?var\s+(\w+)(?:\s*:\s*(\w+))?"
+_CONST_PATTERN = "\s*const\s+(\w+)\s*(?::\s*(\w+))?\s*=\s*(.+)"
+_FUNC_PATTERN = "\s*(static\s+)?func\s+(\w+)\(([\w|:|,|\s]*)\)(?:\s*-\>\s*(\w+)\s*)?:"
 _ENUM_PATTERN = "\s*enum\s+(\w+)"
 _ENUM_VALUES_PATTERN = "\s*enum\s+\w+\s*\{(.*)\}"
 _CLASS_PATTERN = "\s*class\s+(\w+)(?:\s+extends\s+(\w+))?"
@@ -24,8 +24,8 @@ ANY_DECLS = VAR_DECLS | CONST_DECLS | FUNC_DECLS | ENUM_DECLS | CLASS_DECLS
 
 # These store info about user-declared items in the script.
 VarDecl = namedtuple("VarDecl", "line, name, type")
-ConstDecl = namedtuple("ConstDecl", "line, name, value")
-FuncDecl = namedtuple("FuncDecl", "line, static, name, args")
+ConstDecl = namedtuple("ConstDecl", "line, name, value, type")
+FuncDecl = namedtuple("FuncDecl", "line, static, name, args, returns")
 EnumDecl = namedtuple("EnumDecl", "line, name")
 ClassDecl = namedtuple("ClassDecl", "line, name, extends")
 
@@ -46,12 +46,12 @@ def _get_decl(lnum, flags):
     if flags & VAR_DECLS:
         m = re.match(_VAR_PATTERN, line)
         if m:
-            return VarDecl(lnum, m.group(1), None)
+            return VarDecl(lnum, m.group(1), m.group(2))
 
     if flags & CONST_DECLS:
         m = re.match(_CONST_PATTERN, line)
         if m:
-            return ConstDecl(lnum, m.group(1), m.group(2))
+            return ConstDecl(lnum, m.group(1), m.group(3), m.group(2))
 
     if flags & FUNC_DECLS:
         m = re.match(_FUNC_PATTERN, line)
@@ -59,9 +59,10 @@ def _get_decl(lnum, flags):
             static = m.group(1) != None
             name = m.group(2)
             args = m.group(3)
+            returns = m.group(4)
             if args:
-                args = [a.strip() for a in args.split(",")]
-            return FuncDecl(lnum, static, name, args)
+                args = [" ".join(a.split()) for a in args.split(",")]
+            return FuncDecl(lnum, static, name, args, returns)
 
     if flags & ENUM_DECLS:
         m = re.match(_ENUM_PATTERN, line)
@@ -85,6 +86,10 @@ def _args_to_vars(func_decl):
 
     for i, arg in enumerate(func_decl.args):
         arg_type = None
+        m = re.match("(\w+)\s*:\s*(\w+)", arg)
+        if m:
+            arg = m.group(1)
+            arg_type = m.group(2)
         if method and len(method.args) > i:
             method_arg = method.args[i]
             if method_arg:
@@ -281,7 +286,7 @@ def get_enum_values(line_num):
         def map_value(v):
             m = re.match("(\w+)(?:\s*=\s*(.*))?", v)
             if m:
-                return ConstDecl(-1, m.group(1), m.group(2))
+                return ConstDecl(-1, m.group(1), m.group(2), "int")
         return list(filter(lambda v: v, map(map_value, values)))
 
 
@@ -383,7 +388,7 @@ def get_token_chain(line, line_num, start_col):
                         chain.append(ClassToken(name, decl.line))
                         return chain
                     elif decl_type is FuncDecl and decl.static:
-                        chain.append(MethodToken(name, None, decl.args, None))
+                        chain.append(MethodToken(name, decl.returns, decl.args, None))
                         return chain
                     return
         if not prev_class:

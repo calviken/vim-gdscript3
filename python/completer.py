@@ -206,12 +206,16 @@ def build_completion(item, c_name=None):
             d["word"] = item.name
             if item.value:
                 d["abbr"] = "{} = {}".format(item.name, item.value)
+            if item.type:
+                d["kind"] = item.type
         elif t is script.FuncDecl:
             if len(item.args) > 0:
                 d["word"] = "{}(".format(item.name)
             else:
                 d["word"] = "{}()".format(item.name)
             d["abbr"] = "{}({})".format(item.name, ", ".join(item.args))
+            if item.returns:
+                d["kind"] = item.returns
         elif t is script.EnumDecl:
             d["word"] = item.name
             d["kind"] = "enum"
