@@ -61,7 +61,7 @@ def _get_decl(lnum, flags):
             args = m.group(3)
             returns = m.group(4)
             if args:
-                args = [" ".join(a.split()) for a in args.split(",")]
+                args = ["".join(a.split()).replace(":",": ") for a in args.split(",")]
             return FuncDecl(lnum, static, name, args, returns)
 
     if flags & ENUM_DECLS:
