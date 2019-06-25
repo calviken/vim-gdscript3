@@ -350,13 +350,15 @@ def get_token_chain(line, line_num, start_col):
     elif not chain or chain[-1].name == "self":
         if not chain and name == "self":
             return [VariableToken(name, None)]
-        decl = find_decl(line_num, name, ENUM_DECLS | CLASS_DECLS)
+        decl = find_decl(line_num, name, ENUM_DECLS | CLASS_DECLS | VAR_DECLS)
         if decl:
             decl_type = type(decl)
             if decl_type is EnumDecl:
                 return [EnumToken(name, decl.line)]
             elif decl_type is ClassDecl:
                 return [ClassToken(name, decl.line)]
+            elif decl_type is VarDecl:
+                return [VariableToken(name, decl.type)]
         else:
             extended_class = classes.get_class(get_extended_class(line_num))
             if extended_class:
