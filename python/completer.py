@@ -114,7 +114,14 @@ def complete_dot():
         elif last_token_type is script.VariableToken:
             c_name = last_token.type
         if c_name:
-            _add_class_items(classes.get_class(c_name), flags)
+            builtin_class = classes.get_class(c_name)
+            if builtin_class:
+                _add_class_items(builtin_class, flags)
+            else:
+                c_decl = script.find_decl_down(0, c_name, script.CLASS_DECLS)
+                flags = script.ANY_DECLS ^ script.CLASS_DECLS
+                for member in script.iter_decls(c_decl.line, 1, flags):
+                    append_completion(build_completion(member))
 
 # Complete user declared items in the script and items from the extended class.
 # If 'include_globals' is True, add items from global scope.
