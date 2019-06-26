@@ -118,10 +118,7 @@ def complete_dot():
             if builtin_class:
                 _add_class_items(builtin_class, flags)
             else:
-                c_decl = script.find_decl_down(0, c_name, script.CLASS_DECLS)
-                flags = script.ANY_DECLS ^ script.CLASS_DECLS
-                for member in script.iter_decls(c_decl.line, 1, flags):
-                    append_completion(build_completion(member))
+                _add_user_class_items(c_name, flags)
 
 # Complete user declared items in the script and items from the extended class.
 # If 'include_globals' is True, add items from global scope.
@@ -145,6 +142,20 @@ def complete_script(include_globals):
     if include_globals:
         complete_class_names(classes.EXTENDABLE)
         _add_class_items(classes.get_global_scope())
+
+# Recursively add class items for user defined classes.
+def _add_user_class_items(c_name, flags):
+    if not flags:
+        flags = script.ANY_DECLS ^ script.CLASS_DECLS
+    while c_name:
+        c_decl = script.find_decl_down(0, c_name, script.CLASS_DECLS)
+        for member in script.iter_decls(c_decl.line, 1, flags):
+            append_completion(build_completion(member))
+        c_name = c_decl.extends
+        builtin_class = classes.get_class(c_name)
+        if builtin_class:
+            _add_class_items(builtin_class, flags)
+            break
 
 # Recursively add class items.
 def _add_class_items(c, flags=None):
