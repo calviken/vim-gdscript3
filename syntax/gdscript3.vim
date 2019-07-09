@@ -15,7 +15,7 @@ syn match   gdOperator    "\V&&\|||\|!\|&\|^\||\|~\|*\|/\|%\|+\|-\|=\|<\|>"
 syn match   gdDelimiter   "\V(\|)\|[\|]\|{\|}"
 syn keyword gdStatement   break continue pass return
 syn keyword gdKeyword     extends tool signal self
-                        \ const enum var onready export setget
+                        \ const enum var onready export setget class_name
 syn match   gdKeyword     "\v^\s*((static\s*)=func|class)"
                         \ nextgroup=gdFunction skipwhite
 syn keyword gdBoolean     true false
