@@ -33,8 +33,8 @@ syn match   gdConstant  "\v<[A-Z_]+[A-Z0-9_]*>"
 syn keyword gdClass     AABB IP JSON OS RID
 syn match   gdNode      "\v\$\a+\w*"
 
-syn region  gdString      start='\v\"' end='\v\"'
-syn region  gdString      start='\v\'' end='\v\''
+syn region  gdString      start='\v\"' end='\v\"' contains=@Spell
+syn region  gdString      start='\v\'' end='\v\'' contains=@Spell
 syn match   gdEscapeError "\v\\."              containedin=gdString
 syn match   gdEscapeError "\v\\u.{,3}"         containedin=gdString
 syn match   gdEscape      "\v\\[abfnrtv\\'"]"  containedin=gdString
@@ -49,7 +49,7 @@ syn match   gdFloat       "\v<\d*\.\d+(\.)@!>"
 syn match   gdFloat       "\v<\d*\.=\d+(e-=\d+)@="
 syn match   gdExponent    "\v(\d*\.=\d+)@<=e-=\d+>"
 
-syn match   gdComment "\v#.*$"
+syn match   gdComment "\v#.*$" contains=@Spell
 syn keyword gdTodo    TODO FIXME XXX NOTE BUG HACK OPTIMIZE containedin=gdComment
 
 syn region gdFunctionFold
