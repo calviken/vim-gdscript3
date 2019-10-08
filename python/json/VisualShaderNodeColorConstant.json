@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"constant",
+      "type":"Color"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeColorConstant",
+  "inherits":"VisualShaderNode"
+}

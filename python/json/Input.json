@@ -115,6 +115,11 @@
         {
           "name":"action",
           "type":"String"
+        },
+        {
+          "name":"strength",
+          "type":"float",
+          "default":"1.0"
         }
       ]
     },
@@ -147,6 +152,17 @@
       "returns":"Vector3",
       "name":"get_accelerometer",
       "qualifiers":"const"
+    },
+    {
+      "returns":"float",
+      "name":"get_action_strength",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"action",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"Array",
@@ -422,11 +438,32 @@
     },
     {
       "returns":"void",
+      "name":"set_default_cursor_shape",
+      "args":[
+        {
+          "name":"shape",
+          "type":"int",
+          "default":"0"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_mouse_mode",
       "args":[
         {
           "name":"mode",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_use_accumulated_input",
+      "args":[
+        {
+          "name":"enable",
+          "type":"bool"
         }
       ]
     },

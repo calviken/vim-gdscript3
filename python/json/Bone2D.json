@@ -1,0 +1,31 @@
+{
+  "members":[
+    {
+      "name":"default_length",
+      "type":"float"
+    },
+    {
+      "name":"rest",
+      "type":"Transform2D"
+    }
+  ],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"void",
+      "name":"apply_rest"
+    },
+    {
+      "returns":"int",
+      "name":"get_index_in_skeleton",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Transform2D",
+      "name":"get_skeleton_rest",
+      "qualifiers":"const"
+    }
+  ],
+  "name":"Bone2D",
+  "inherits":"Node2D"
+}

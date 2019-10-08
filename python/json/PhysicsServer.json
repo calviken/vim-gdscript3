@@ -257,48 +257,58 @@
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_LOWER_LIMIT",
+      "name":"G6DOF_JOINT_LINEAR_MOTOR_TARGET_VELOCITY",
       "value":"5",
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_UPPER_LIMIT",
+      "name":"G6DOF_JOINT_LINEAR_MOTOR_FORCE_LIMIT",
       "value":"6",
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_LIMIT_SOFTNESS",
-      "value":"7",
-      "type":"G6DOFJointAxisParam"
-    },
-    {
-      "name":"G6DOF_JOINT_ANGULAR_DAMPING",
-      "value":"8",
-      "type":"G6DOFJointAxisParam"
-    },
-    {
-      "name":"G6DOF_JOINT_ANGULAR_RESTITUTION",
-      "value":"9",
-      "type":"G6DOFJointAxisParam"
-    },
-    {
-      "name":"G6DOF_JOINT_ANGULAR_FORCE_LIMIT",
+      "name":"G6DOF_JOINT_ANGULAR_LOWER_LIMIT",
       "value":"10",
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_ERP",
+      "name":"G6DOF_JOINT_ANGULAR_UPPER_LIMIT",
       "value":"11",
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_MOTOR_TARGET_VELOCITY",
+      "name":"G6DOF_JOINT_ANGULAR_LIMIT_SOFTNESS",
       "value":"12",
       "type":"G6DOFJointAxisParam"
     },
     {
-      "name":"G6DOF_JOINT_ANGULAR_MOTOR_FORCE_LIMIT",
+      "name":"G6DOF_JOINT_ANGULAR_DAMPING",
       "value":"13",
+      "type":"G6DOFJointAxisParam"
+    },
+    {
+      "name":"G6DOF_JOINT_ANGULAR_RESTITUTION",
+      "value":"14",
+      "type":"G6DOFJointAxisParam"
+    },
+    {
+      "name":"G6DOF_JOINT_ANGULAR_FORCE_LIMIT",
+      "value":"15",
+      "type":"G6DOFJointAxisParam"
+    },
+    {
+      "name":"G6DOF_JOINT_ANGULAR_ERP",
+      "value":"16",
+      "type":"G6DOFJointAxisParam"
+    },
+    {
+      "name":"G6DOF_JOINT_ANGULAR_MOTOR_TARGET_VELOCITY",
+      "value":"17",
+      "type":"G6DOFJointAxisParam"
+    },
+    {
+      "name":"G6DOF_JOINT_ANGULAR_MOTOR_FORCE_LIMIT",
+      "value":"18",
       "type":"G6DOFJointAxisParam"
     },
     {
@@ -313,7 +323,12 @@
     },
     {
       "name":"G6DOF_JOINT_FLAG_ENABLE_MOTOR",
-      "value":"2",
+      "value":"4",
+      "type":"G6DOFJointAxisFlag"
+    },
+    {
+      "name":"G6DOF_JOINT_FLAG_ENABLE_LINEAR_MOTOR",
+      "value":"5",
       "type":"G6DOFJointAxisFlag"
     },
     {
@@ -342,23 +357,28 @@
       "type":"ShapeType"
     },
     {
-      "name":"SHAPE_CONVEX_POLYGON",
+      "name":"SHAPE_CYLINDER",
       "value":"5",
       "type":"ShapeType"
     },
     {
-      "name":"SHAPE_CONCAVE_POLYGON",
+      "name":"SHAPE_CONVEX_POLYGON",
       "value":"6",
       "type":"ShapeType"
     },
     {
-      "name":"SHAPE_HEIGHTMAP",
+      "name":"SHAPE_CONCAVE_POLYGON",
       "value":"7",
       "type":"ShapeType"
     },
     {
-      "name":"SHAPE_CUSTOM",
+      "name":"SHAPE_HEIGHTMAP",
       "value":"8",
+      "type":"ShapeType"
+    },
+    {
+      "name":"SHAPE_CUSTOM",
+      "value":"9",
       "type":"ShapeType"
     },
     {
@@ -442,13 +462,8 @@
       "type":"BodyMode"
     },
     {
-      "name":"BODY_MODE_SOFT",
-      "value":"3",
-      "type":"BodyMode"
-    },
-    {
       "name":"BODY_MODE_CHARACTER",
-      "value":"4",
+      "value":"3",
       "type":"BodyMode"
     },
     {
@@ -574,6 +589,11 @@
     {
       "name":"SPACE_PARAM_CONSTRAINT_DEFAULT_BIAS",
       "value":"7",
+      "type":"SpaceParameter"
+    },
+    {
+      "name":"SPACE_PARAM_TEST_MOTION_MIN_CONTACT_DEPTH",
+      "value":"8",
       "type":"SpaceParameter"
     },
     {
@@ -782,6 +802,24 @@
     },
     {
       "returns":"void",
+      "name":"area_set_area_monitor_callback",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        },
+        {
+          "name":"receiver",
+          "type":"Object"
+        },
+        {
+          "name":"method",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"area_set_collision_layer",
       "args":[
         {
@@ -823,6 +861,20 @@
         {
           "name":"method",
           "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"area_set_monitorable",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        },
+        {
+          "name":"monitorable",
+          "type":"bool"
         }
       ]
     },
@@ -938,6 +990,20 @@
     },
     {
       "returns":"void",
+      "name":"body_add_central_force",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"force",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"body_add_collision_exception",
       "args":[
         {
@@ -947,6 +1013,24 @@
         {
           "name":"excepted_body",
           "type":"RID"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_add_force",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"force",
+          "type":"Vector3"
+        },
+        {
+          "name":"position",
+          "type":"Vector3"
         }
       ]
     },
@@ -966,6 +1050,34 @@
           "name":"transform",
           "type":"Transform",
           "default":"Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_add_torque",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"torque",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_apply_central_impulse",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"impulse",
+          "type":"Vector3"
         }
       ]
     },

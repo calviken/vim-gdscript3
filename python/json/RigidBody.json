@@ -81,6 +81,10 @@
       "type":"RigidBody.Mode"
     },
     {
+      "name":"physics_material_override",
+      "type":"PhysicsMaterial"
+    },
+    {
       "name":"sleeping",
       "type":"bool"
     },
@@ -125,12 +129,66 @@
     },
     {
       "returns":"void",
+      "name":"add_central_force",
+      "args":[
+        {
+          "name":"force",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_force",
+      "args":[
+        {
+          "name":"force",
+          "type":"Vector3"
+        },
+        {
+          "name":"position",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_torque",
+      "args":[
+        {
+          "name":"torque",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_central_impulse",
+      "args":[
+        {
+          "name":"impulse",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"apply_impulse",
       "args":[
         {
           "name":"position",
           "type":"Vector3"
         },
+        {
+          "name":"impulse",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_torque_impulse",
+      "args":[
         {
           "name":"impulse",
           "type":"Vector3"

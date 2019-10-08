@@ -7,6 +7,22 @@
     {
       "name":"light_mode",
       "type":"CanvasItemMaterial.LightMode"
+    },
+    {
+      "name":"particles_anim_h_frames",
+      "type":"int"
+    },
+    {
+      "name":"particles_anim_loop",
+      "type":"bool"
+    },
+    {
+      "name":"particles_anim_v_frames",
+      "type":"int"
+    },
+    {
+      "name":"particles_animation",
+      "type":"bool"
     }
   ],
   "constants":[

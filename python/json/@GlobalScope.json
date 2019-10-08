@@ -21,10 +21,6 @@
       "type":"Geometry"
     },
     {
-      "name":"GodotSharp",
-      "type":"GodotSharp"
-    },
-    {
       "name":"IP",
       "type":"IP"
     },
@@ -1445,6 +1441,16 @@
       "type":"ButtonList"
     },
     {
+      "name":"BUTTON_XBUTTON1",
+      "value":"8",
+      "type":"ButtonList"
+    },
+    {
+      "name":"BUTTON_XBUTTON2",
+      "value":"9",
+      "type":"ButtonList"
+    },
+    {
       "name":"BUTTON_WHEEL_UP",
       "value":"4",
       "type":"ButtonList"
@@ -1477,6 +1483,16 @@
     {
       "name":"BUTTON_MASK_MIDDLE",
       "value":"4",
+      "type":"ButtonList"
+    },
+    {
+      "name":"BUTTON_MASK_XBUTTON1",
+      "value":"128",
+      "type":"ButtonList"
+    },
+    {
+      "name":"BUTTON_MASK_XBUTTON2",
+      "value":"256",
       "type":"ButtonList"
     },
     {
@@ -1768,6 +1784,41 @@
       "name":"JOY_ANALOG_R2",
       "value":"7",
       "type":"JoystickList"
+    },
+    {
+      "name":"MIDI_MESSAGE_NOTE_OFF",
+      "value":"8",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_NOTE_ON",
+      "value":"9",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_AFTERTOUCH",
+      "value":"10",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_CONTROL_CHANGE",
+      "value":"11",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_PROGRAM_CHANGE",
+      "value":"12",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_CHANNEL_PRESSURE",
+      "value":"13",
+      "type":"MidiMessageList"
+    },
+    {
+      "name":"MIDI_MESSAGE_PITCH_BEND",
+      "value":"14",
+      "type":"MidiMessageList"
     },
     {
       "name":"OK",
@@ -2065,18 +2116,23 @@
       "type":"PropertyHint"
     },
     {
-      "name":"PROPERTY_HINT_COLOR_NO_ALPHA",
+      "name":"PROPERTY_HINT_PLACEHOLDER_TEXT",
       "value":"19",
       "type":"PropertyHint"
     },
     {
-      "name":"PROPERTY_HINT_IMAGE_COMPRESS_LOSSY",
+      "name":"PROPERTY_HINT_COLOR_NO_ALPHA",
       "value":"20",
       "type":"PropertyHint"
     },
     {
-      "name":"PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS",
+      "name":"PROPERTY_HINT_IMAGE_COMPRESS_LOSSY",
       "value":"21",
+      "type":"PropertyHint"
+    },
+    {
+      "name":"PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS",
+      "value":"22",
       "type":"PropertyHint"
     },
     {
@@ -2122,16 +2178,6 @@
     {
       "name":"PROPERTY_USAGE_CATEGORY",
       "value":"256",
-      "type":"PropertyUsageFlags"
-    },
-    {
-      "name":"PROPERTY_USAGE_STORE_IF_NONZERO",
-      "value":"512",
-      "type":"PropertyUsageFlags"
-    },
-    {
-      "name":"PROPERTY_USAGE_STORE_IF_NONONE",
-      "value":"1024",
       "type":"PropertyUsageFlags"
     },
     {
@@ -2633,38 +2679,8 @@
       "name":"Color",
       "args":[
         {
-          "name":"r",
-          "type":"float"
-        },
-        {
-          "name":"g",
-          "type":"float"
-        },
-        {
-          "name":"b",
-          "type":"float"
-        },
-        {
-          "name":"a",
-          "type":"float"
-        }
-      ]
-    },
-    {
-      "returns":"Color",
-      "name":"Color",
-      "args":[
-        {
-          "name":"r",
-          "type":"float"
-        },
-        {
-          "name":"g",
-          "type":"float"
-        },
-        {
-          "name":"b",
-          "type":"float"
+          "name":"from",
+          "type":"String"
         }
       ]
     },
@@ -2683,8 +2699,38 @@
       "name":"Color",
       "args":[
         {
-          "name":"from",
-          "type":"String"
+          "name":"r",
+          "type":"float"
+        },
+        {
+          "name":"g",
+          "type":"float"
+        },
+        {
+          "name":"b",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Color",
+      "name":"Color",
+      "args":[
+        {
+          "name":"r",
+          "type":"float"
+        },
+        {
+          "name":"g",
+          "type":"float"
+        },
+        {
+          "name":"b",
+          "type":"float"
+        },
+        {
+          "name":"a",
+          "type":"float"
         }
       ]
     },
@@ -3125,20 +3171,18 @@
       "name":"Quat",
       "args":[
         {
-          "name":"x",
-          "type":"float"
-        },
+          "name":"from",
+          "type":"Basis"
+        }
+      ]
+    },
+    {
+      "returns":"Quat",
+      "name":"Quat",
+      "args":[
         {
-          "name":"y",
-          "type":"float"
-        },
-        {
-          "name":"z",
-          "type":"float"
-        },
-        {
-          "name":"w",
-          "type":"float"
+          "name":"euler",
+          "type":"Vector3"
         }
       ]
     },
@@ -3161,8 +3205,20 @@
       "name":"Quat",
       "args":[
         {
-          "name":"from",
-          "type":"Basis"
+          "name":"x",
+          "type":"float"
+        },
+        {
+          "name":"y",
+          "type":"float"
+        },
+        {
+          "name":"z",
+          "type":"float"
+        },
+        {
+          "name":"w",
+          "type":"float"
         }
       ]
     },
@@ -3647,11 +3703,11 @@
       "name":"atan2",
       "args":[
         {
-          "name":"x",
+          "name":"y",
           "type":"float"
         },
         {
-          "name":"y",
+          "name":"x",
           "type":"float"
         }
       ]
@@ -3693,6 +3749,11 @@
         {
           "name":"bytes",
           "type":"PoolByteArray"
+        },
+        {
+          "name":"allow_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -3749,7 +3810,7 @@
       ]
     },
     {
-      "returns":"Object",
+      "returns":"Variant",
       "name":"convert",
       "args":[
         {
@@ -3933,7 +3994,7 @@
       ]
     },
     {
-      "returns":"Object",
+      "returns":"FuncRef",
       "name":"funcref",
       "args":[
         {
@@ -3945,6 +4006,10 @@
           "type":"String"
         }
       ]
+    },
+    {
+      "returns":"Array",
+      "name":"get_stack"
     },
     {
       "returns":"int",
@@ -4036,6 +4101,16 @@
     },
     {
       "returns":"bool",
+      "name":"is_instance_valid",
+      "args":[
+        {
+          "name":"instance",
+          "type":"Object"
+        }
+      ]
+    },
+    {
+      "returns":"bool",
       "name":"is_nan",
       "args":[
         {
@@ -4055,16 +4130,16 @@
       ]
     },
     {
-      "returns":"float",
+      "returns":"Variant",
       "name":"lerp",
       "args":[
         {
           "name":"from",
-          "type":"float"
+          "type":"Variant"
         },
         {
           "name":"to",
-          "type":"float"
+          "type":"Variant"
         },
         {
           "name":"weight",
@@ -4083,7 +4158,7 @@
       ]
     },
     {
-      "returns":"Object",
+      "returns":"Resource",
       "name":"load",
       "args":[
         {
@@ -4195,6 +4270,11 @@
     },
     {
       "returns":"void",
+      "name":"print_debug",
+      "qualifiers":"vararg"
+    },
+    {
+      "returns":"void",
       "name":"print_stack"
     },
     {
@@ -4216,6 +4296,26 @@
       "returns":"void",
       "name":"printt",
       "qualifiers":"vararg"
+    },
+    {
+      "returns":"void",
+      "name":"push_error",
+      "args":[
+        {
+          "name":"message",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"push_warning",
+      "args":[
+        {
+          "name":"message",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"float",
@@ -4346,6 +4446,24 @@
     },
     {
       "returns":"float",
+      "name":"smoothstep",
+      "args":[
+        {
+          "name":"from",
+          "type":"float"
+        },
+        {
+          "name":"to",
+          "type":"float"
+        },
+        {
+          "name":"weight",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"float",
       "name":"sqrt",
       "args":[
         {
@@ -4450,6 +4568,11 @@
         {
           "name":"var",
           "type":"Variant"
+        },
+        {
+          "name":"full_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -4464,7 +4587,7 @@
       ]
     },
     {
-      "returns":"Object",
+      "returns":"WeakRef",
       "name":"weakref",
       "args":[
         {

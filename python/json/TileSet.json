@@ -7,8 +7,13 @@
       "type":"BitmaskMode"
     },
     {
-      "name":"BITMASK_3X3",
+      "name":"BITMASK_3X3_MINIMAL",
       "value":"1",
+      "type":"BitmaskMode"
+    },
+    {
+      "name":"BITMASK_3X3",
+      "value":"2",
       "type":"BitmaskMode"
     },
     {
@@ -50,6 +55,21 @@
       "name":"BIND_BOTTOMRIGHT",
       "value":"256",
       "type":"AutotileBindings"
+    },
+    {
+      "name":"SINGLE_TILE",
+      "value":"0",
+      "type":"TileMode"
+    },
+    {
+      "name":"AUTO_TILE",
+      "value":"1",
+      "type":"TileMode"
+    },
+    {
+      "name":"ATLAS_TILE",
+      "value":"2",
+      "type":"TileMode"
     }
   ],
   "methods":[
@@ -92,12 +112,145 @@
       ]
     },
     {
+      "returns":"void",
+      "name":"autotile_clear_bitmask_map",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"autotile_get_bitmask",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
       "returns":"int",
       "name":"autotile_get_bitmask_mode",
       "qualifiers":"const",
       "args":[
         {
           "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"autotile_get_icon_coordinate",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"OccluderPolygon2D",
+      "name":"autotile_get_light_occluder",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"NavigationPolygon",
+      "name":"autotile_get_navigation_polygon",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"autotile_get_size",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"autotile_get_spacing",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"autotile_get_subtile_priority",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"autotile_get_z_index",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_bitmask",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"bitmask",
+          "type":"Vector2"
+        },
+        {
+          "name":"flag",
           "type":"int"
         }
       ]
@@ -112,6 +265,120 @@
         },
         {
           "name":"mode",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_icon_coordinate",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_light_occluder",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"light_occluder",
+          "type":"OccluderPolygon2D"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_navigation_polygon",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"navigation_polygon",
+          "type":"NavigationPolygon"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_size",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"size",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_spacing",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"spacing",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_subtile_priority",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        },
+        {
+          "name":"priority",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"autotile_set_z_index",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"coord",
+          "type":"Vector2"
+        },
+        {
+          "name":"z_index",
           "type":"int"
         }
       ]
@@ -203,6 +470,17 @@
     {
       "returns":"ShaderMaterial",
       "name":"tile_get_material",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Color",
+      "name":"tile_get_modulate",
       "qualifiers":"const",
       "args":[
         {
@@ -304,8 +582,38 @@
       ]
     },
     {
+      "returns":"Vector2",
+      "name":"tile_get_shape_offset",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"shape_id",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"bool",
       "name":"tile_get_shape_one_way",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"shape_id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"float",
+      "name":"tile_get_shape_one_way_margin",
       "qualifiers":"const",
       "args":[
         {
@@ -367,6 +675,28 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"tile_get_tile_mode",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"tile_get_z_index",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"tile_set_light_occluder",
       "args":[
@@ -391,6 +721,20 @@
         {
           "name":"material",
           "type":"ShaderMaterial"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"tile_set_modulate",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"color",
+          "type":"Color"
         }
       ]
     },
@@ -498,6 +842,24 @@
     },
     {
       "returns":"void",
+      "name":"tile_set_shape_offset",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"shape_id",
+          "type":"int"
+        },
+        {
+          "name":"shape_offset",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"tile_set_shape_one_way",
       "args":[
         {
@@ -511,6 +873,24 @@
         {
           "name":"one_way",
           "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"tile_set_shape_one_way_margin",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"shape_id",
+          "type":"int"
+        },
+        {
+          "name":"one_way",
+          "type":"float"
         }
       ]
     },
@@ -571,6 +951,34 @@
         {
           "name":"texture_offset",
           "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"tile_set_tile_mode",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"tilemode",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"tile_set_z_index",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"z_index",
+          "type":"int"
         }
       ]
     }

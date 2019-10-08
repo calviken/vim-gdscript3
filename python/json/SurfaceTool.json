@@ -64,20 +64,10 @@
     },
     {
       "returns":"void",
-      "name":"add_to_format",
-      "args":[
-        {
-          "name":"flags",
-          "type":"int"
-        }
-      ]
-    },
-    {
-      "returns":"void",
       "name":"add_triangle_fan",
       "args":[
         {
-          "name":"vertexes",
+          "name":"vertices",
           "type":"PoolVector3Array"
         },
         {
@@ -191,7 +181,7 @@
         {
           "name":"flags",
           "type":"int",
-          "default":"97792"
+          "default":"97280"
         }
       ]
     },
@@ -215,7 +205,14 @@
     },
     {
       "returns":"void",
-      "name":"generate_normals"
+      "name":"generate_normals",
+      "args":[
+        {
+          "name":"flip",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
     },
     {
       "returns":"void",

@@ -17,7 +17,12 @@
       "type":"float"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"IDENTITY",
+      "value":"Quat( 0, 0, 0, 1 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Quat",
@@ -52,6 +57,10 @@
       ]
     },
     {
+      "returns":"Vector3",
+      "name":"get_euler"
+    },
+    {
       "returns":"Quat",
       "name":"inverse"
     },
@@ -70,6 +79,30 @@
     {
       "returns":"Quat",
       "name":"normalized"
+    },
+    {
+      "returns":"void",
+      "name":"set_axis_angle",
+      "args":[
+        {
+          "name":"axis",
+          "type":"Vector3"
+        },
+        {
+          "name":"angle",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_euler",
+      "args":[
+        {
+          "name":"euler",
+          "type":"Vector3"
+        }
+      ]
     },
     {
       "returns":"Quat",

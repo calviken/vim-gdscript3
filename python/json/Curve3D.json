@@ -3,6 +3,10 @@
     {
       "name":"bake_interval",
       "type":"float"
+    },
+    {
+      "name":"up_vector_enabled",
+      "type":"bool"
     }
   ],
   "constants":[],
@@ -50,6 +54,33 @@
       "returns":"PoolRealArray",
       "name":"get_baked_tilts",
       "qualifiers":"const"
+    },
+    {
+      "returns":"PoolVector3Array",
+      "name":"get_baked_up_vectors",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"float",
+      "name":"get_closest_offset",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"to_point",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
+      "name":"get_closest_point",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"to_point",
+          "type":"Vector3"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -126,6 +157,22 @@
         },
         {
           "name":"cubic",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
+      "name":"interpolate_baked_up_vector",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"offset",
+          "type":"float"
+        },
+        {
+          "name":"apply_tilt",
           "type":"bool",
           "default":"false"
         }

@@ -53,6 +53,16 @@
   "methods":[
     {
       "returns":"void",
+      "name":"add_central_force",
+      "args":[
+        {
+          "name":"force",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"add_force",
       "args":[
         {
@@ -67,12 +77,18 @@
     },
     {
       "returns":"void",
-      "name":"apply_impulse",
+      "name":"add_torque",
       "args":[
         {
-          "name":"position",
+          "name":"torque",
           "type":"Vector3"
-        },
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_central_impulse",
+      "args":[
         {
           "name":"j",
           "type":"Vector3"
@@ -81,8 +97,12 @@
     },
     {
       "returns":"void",
-      "name":"apply_torqe_impulse",
+      "name":"apply_impulse",
       "args":[
+        {
+          "name":"position",
+          "type":"Vector3"
+        },
         {
           "name":"j",
           "type":"Vector3"
@@ -169,6 +189,17 @@
       "returns":"int",
       "name":"get_contact_count",
       "qualifiers":"const"
+    },
+    {
+      "returns":"float",
+      "name":"get_contact_impulse",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"contact_idx",
+          "type":"int"
+        }
+      ]
     },
     {
       "returns":"Vector3",

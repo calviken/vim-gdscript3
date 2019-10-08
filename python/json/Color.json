@@ -45,7 +45,588 @@
       "type":"float"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"gray",
+      "value":"Color( 0.75, 0.75, 0.75, 1 )"
+    },
+    {
+      "name":"aliceblue",
+      "value":"Color( 0.94, 0.97, 1, 1 )"
+    },
+    {
+      "name":"antiquewhite",
+      "value":"Color( 0.98, 0.92, 0.84, 1 )"
+    },
+    {
+      "name":"aqua",
+      "value":"Color( 0, 1, 1, 1 )"
+    },
+    {
+      "name":"aquamarine",
+      "value":"Color( 0.5, 1, 0.83, 1 )"
+    },
+    {
+      "name":"azure",
+      "value":"Color( 0.94, 1, 1, 1 )"
+    },
+    {
+      "name":"beige",
+      "value":"Color( 0.96, 0.96, 0.86, 1 )"
+    },
+    {
+      "name":"bisque",
+      "value":"Color( 1, 0.89, 0.77, 1 )"
+    },
+    {
+      "name":"black",
+      "value":"Color( 0, 0, 0, 1 )"
+    },
+    {
+      "name":"blanchedalmond",
+      "value":"Color( 1, 0.92, 0.8, 1 )"
+    },
+    {
+      "name":"blue",
+      "value":"Color( 0, 0, 1, 1 )"
+    },
+    {
+      "name":"blueviolet",
+      "value":"Color( 0.54, 0.17, 0.89, 1 )"
+    },
+    {
+      "name":"brown",
+      "value":"Color( 0.65, 0.16, 0.16, 1 )"
+    },
+    {
+      "name":"burlywood",
+      "value":"Color( 0.87, 0.72, 0.53, 1 )"
+    },
+    {
+      "name":"cadetblue",
+      "value":"Color( 0.37, 0.62, 0.63, 1 )"
+    },
+    {
+      "name":"chartreuse",
+      "value":"Color( 0.5, 1, 0, 1 )"
+    },
+    {
+      "name":"chocolate",
+      "value":"Color( 0.82, 0.41, 0.12, 1 )"
+    },
+    {
+      "name":"coral",
+      "value":"Color( 1, 0.5, 0.31, 1 )"
+    },
+    {
+      "name":"cornflower",
+      "value":"Color( 0.39, 0.58, 0.93, 1 )"
+    },
+    {
+      "name":"cornsilk",
+      "value":"Color( 1, 0.97, 0.86, 1 )"
+    },
+    {
+      "name":"crimson",
+      "value":"Color( 0.86, 0.08, 0.24, 1 )"
+    },
+    {
+      "name":"cyan",
+      "value":"Color( 0, 1, 1, 1 )"
+    },
+    {
+      "name":"darkblue",
+      "value":"Color( 0, 0, 0.55, 1 )"
+    },
+    {
+      "name":"darkcyan",
+      "value":"Color( 0, 0.55, 0.55, 1 )"
+    },
+    {
+      "name":"darkgoldenrod",
+      "value":"Color( 0.72, 0.53, 0.04, 1 )"
+    },
+    {
+      "name":"darkgray",
+      "value":"Color( 0.66, 0.66, 0.66, 1 )"
+    },
+    {
+      "name":"darkgreen",
+      "value":"Color( 0, 0.39, 0, 1 )"
+    },
+    {
+      "name":"darkkhaki",
+      "value":"Color( 0.74, 0.72, 0.42, 1 )"
+    },
+    {
+      "name":"darkmagenta",
+      "value":"Color( 0.55, 0, 0.55, 1 )"
+    },
+    {
+      "name":"darkolivegreen",
+      "value":"Color( 0.33, 0.42, 0.18, 1 )"
+    },
+    {
+      "name":"darkorange",
+      "value":"Color( 1, 0.55, 0, 1 )"
+    },
+    {
+      "name":"darkorchid",
+      "value":"Color( 0.6, 0.2, 0.8, 1 )"
+    },
+    {
+      "name":"darkred",
+      "value":"Color( 0.55, 0, 0, 1 )"
+    },
+    {
+      "name":"darksalmon",
+      "value":"Color( 0.91, 0.59, 0.48, 1 )"
+    },
+    {
+      "name":"darkseagreen",
+      "value":"Color( 0.56, 0.74, 0.56, 1 )"
+    },
+    {
+      "name":"darkslateblue",
+      "value":"Color( 0.28, 0.24, 0.55, 1 )"
+    },
+    {
+      "name":"darkslategray",
+      "value":"Color( 0.18, 0.31, 0.31, 1 )"
+    },
+    {
+      "name":"darkturquoise",
+      "value":"Color( 0, 0.81, 0.82, 1 )"
+    },
+    {
+      "name":"darkviolet",
+      "value":"Color( 0.58, 0, 0.83, 1 )"
+    },
+    {
+      "name":"deeppink",
+      "value":"Color( 1, 0.08, 0.58, 1 )"
+    },
+    {
+      "name":"deepskyblue",
+      "value":"Color( 0, 0.75, 1, 1 )"
+    },
+    {
+      "name":"dimgray",
+      "value":"Color( 0.41, 0.41, 0.41, 1 )"
+    },
+    {
+      "name":"dodgerblue",
+      "value":"Color( 0.12, 0.56, 1, 1 )"
+    },
+    {
+      "name":"firebrick",
+      "value":"Color( 0.7, 0.13, 0.13, 1 )"
+    },
+    {
+      "name":"floralwhite",
+      "value":"Color( 1, 0.98, 0.94, 1 )"
+    },
+    {
+      "name":"forestgreen",
+      "value":"Color( 0.13, 0.55, 0.13, 1 )"
+    },
+    {
+      "name":"fuchsia",
+      "value":"Color( 1, 0, 1, 1 )"
+    },
+    {
+      "name":"gainsboro",
+      "value":"Color( 0.86, 0.86, 0.86, 1 )"
+    },
+    {
+      "name":"ghostwhite",
+      "value":"Color( 0.97, 0.97, 1, 1 )"
+    },
+    {
+      "name":"gold",
+      "value":"Color( 1, 0.84, 0, 1 )"
+    },
+    {
+      "name":"goldenrod",
+      "value":"Color( 0.85, 0.65, 0.13, 1 )"
+    },
+    {
+      "name":"green",
+      "value":"Color( 0, 1, 0, 1 )"
+    },
+    {
+      "name":"greenyellow",
+      "value":"Color( 0.68, 1, 0.18, 1 )"
+    },
+    {
+      "name":"honeydew",
+      "value":"Color( 0.94, 1, 0.94, 1 )"
+    },
+    {
+      "name":"hotpink",
+      "value":"Color( 1, 0.41, 0.71, 1 )"
+    },
+    {
+      "name":"indianred",
+      "value":"Color( 0.8, 0.36, 0.36, 1 )"
+    },
+    {
+      "name":"indigo",
+      "value":"Color( 0.29, 0, 0.51, 1 )"
+    },
+    {
+      "name":"ivory",
+      "value":"Color( 1, 1, 0.94, 1 )"
+    },
+    {
+      "name":"khaki",
+      "value":"Color( 0.94, 0.9, 0.55, 1 )"
+    },
+    {
+      "name":"lavender",
+      "value":"Color( 0.9, 0.9, 0.98, 1 )"
+    },
+    {
+      "name":"lavenderblush",
+      "value":"Color( 1, 0.94, 0.96, 1 )"
+    },
+    {
+      "name":"lawngreen",
+      "value":"Color( 0.49, 0.99, 0, 1 )"
+    },
+    {
+      "name":"lemonchiffon",
+      "value":"Color( 1, 0.98, 0.8, 1 )"
+    },
+    {
+      "name":"lightblue",
+      "value":"Color( 0.68, 0.85, 0.9, 1 )"
+    },
+    {
+      "name":"lightcoral",
+      "value":"Color( 0.94, 0.5, 0.5, 1 )"
+    },
+    {
+      "name":"lightcyan",
+      "value":"Color( 0.88, 1, 1, 1 )"
+    },
+    {
+      "name":"lightgoldenrod",
+      "value":"Color( 0.98, 0.98, 0.82, 1 )"
+    },
+    {
+      "name":"lightgray",
+      "value":"Color( 0.83, 0.83, 0.83, 1 )"
+    },
+    {
+      "name":"lightgreen",
+      "value":"Color( 0.56, 0.93, 0.56, 1 )"
+    },
+    {
+      "name":"lightpink",
+      "value":"Color( 1, 0.71, 0.76, 1 )"
+    },
+    {
+      "name":"lightsalmon",
+      "value":"Color( 1, 0.63, 0.48, 1 )"
+    },
+    {
+      "name":"lightseagreen",
+      "value":"Color( 0.13, 0.7, 0.67, 1 )"
+    },
+    {
+      "name":"lightskyblue",
+      "value":"Color( 0.53, 0.81, 0.98, 1 )"
+    },
+    {
+      "name":"lightslategray",
+      "value":"Color( 0.47, 0.53, 0.6, 1 )"
+    },
+    {
+      "name":"lightsteelblue",
+      "value":"Color( 0.69, 0.77, 0.87, 1 )"
+    },
+    {
+      "name":"lightyellow",
+      "value":"Color( 1, 1, 0.88, 1 )"
+    },
+    {
+      "name":"lime",
+      "value":"Color( 0, 1, 0, 1 )"
+    },
+    {
+      "name":"limegreen",
+      "value":"Color( 0.2, 0.8, 0.2, 1 )"
+    },
+    {
+      "name":"linen",
+      "value":"Color( 0.98, 0.94, 0.9, 1 )"
+    },
+    {
+      "name":"magenta",
+      "value":"Color( 1, 0, 1, 1 )"
+    },
+    {
+      "name":"maroon",
+      "value":"Color( 0.69, 0.19, 0.38, 1 )"
+    },
+    {
+      "name":"mediumaquamarine",
+      "value":"Color( 0.4, 0.8, 0.67, 1 )"
+    },
+    {
+      "name":"mediumblue",
+      "value":"Color( 0, 0, 0.8, 1 )"
+    },
+    {
+      "name":"mediumorchid",
+      "value":"Color( 0.73, 0.33, 0.83, 1 )"
+    },
+    {
+      "name":"mediumpurple",
+      "value":"Color( 0.58, 0.44, 0.86, 1 )"
+    },
+    {
+      "name":"mediumseagreen",
+      "value":"Color( 0.24, 0.7, 0.44, 1 )"
+    },
+    {
+      "name":"mediumslateblue",
+      "value":"Color( 0.48, 0.41, 0.93, 1 )"
+    },
+    {
+      "name":"mediumspringgreen",
+      "value":"Color( 0, 0.98, 0.6, 1 )"
+    },
+    {
+      "name":"mediumturquoise",
+      "value":"Color( 0.28, 0.82, 0.8, 1 )"
+    },
+    {
+      "name":"mediumvioletred",
+      "value":"Color( 0.78, 0.08, 0.52, 1 )"
+    },
+    {
+      "name":"midnightblue",
+      "value":"Color( 0.1, 0.1, 0.44, 1 )"
+    },
+    {
+      "name":"mintcream",
+      "value":"Color( 0.96, 1, 0.98, 1 )"
+    },
+    {
+      "name":"mistyrose",
+      "value":"Color( 1, 0.89, 0.88, 1 )"
+    },
+    {
+      "name":"moccasin",
+      "value":"Color( 1, 0.89, 0.71, 1 )"
+    },
+    {
+      "name":"navajowhite",
+      "value":"Color( 1, 0.87, 0.68, 1 )"
+    },
+    {
+      "name":"navyblue",
+      "value":"Color( 0, 0, 0.5, 1 )"
+    },
+    {
+      "name":"oldlace",
+      "value":"Color( 0.99, 0.96, 0.9, 1 )"
+    },
+    {
+      "name":"olive",
+      "value":"Color( 0.5, 0.5, 0, 1 )"
+    },
+    {
+      "name":"olivedrab",
+      "value":"Color( 0.42, 0.56, 0.14, 1 )"
+    },
+    {
+      "name":"orange",
+      "value":"Color( 1, 0.65, 0, 1 )"
+    },
+    {
+      "name":"orangered",
+      "value":"Color( 1, 0.27, 0, 1 )"
+    },
+    {
+      "name":"orchid",
+      "value":"Color( 0.85, 0.44, 0.84, 1 )"
+    },
+    {
+      "name":"palegoldenrod",
+      "value":"Color( 0.93, 0.91, 0.67, 1 )"
+    },
+    {
+      "name":"palegreen",
+      "value":"Color( 0.6, 0.98, 0.6, 1 )"
+    },
+    {
+      "name":"paleturquoise",
+      "value":"Color( 0.69, 0.93, 0.93, 1 )"
+    },
+    {
+      "name":"palevioletred",
+      "value":"Color( 0.86, 0.44, 0.58, 1 )"
+    },
+    {
+      "name":"papayawhip",
+      "value":"Color( 1, 0.94, 0.84, 1 )"
+    },
+    {
+      "name":"peachpuff",
+      "value":"Color( 1, 0.85, 0.73, 1 )"
+    },
+    {
+      "name":"peru",
+      "value":"Color( 0.8, 0.52, 0.25, 1 )"
+    },
+    {
+      "name":"pink",
+      "value":"Color( 1, 0.75, 0.8, 1 )"
+    },
+    {
+      "name":"plum",
+      "value":"Color( 0.87, 0.63, 0.87, 1 )"
+    },
+    {
+      "name":"powderblue",
+      "value":"Color( 0.69, 0.88, 0.9, 1 )"
+    },
+    {
+      "name":"purple",
+      "value":"Color( 0.63, 0.13, 0.94, 1 )"
+    },
+    {
+      "name":"rebeccapurple",
+      "value":"Color( 0.4, 0.2, 0.6, 1 )"
+    },
+    {
+      "name":"red",
+      "value":"Color( 1, 0, 0, 1 )"
+    },
+    {
+      "name":"rosybrown",
+      "value":"Color( 0.74, 0.56, 0.56, 1 )"
+    },
+    {
+      "name":"royalblue",
+      "value":"Color( 0.25, 0.41, 0.88, 1 )"
+    },
+    {
+      "name":"saddlebrown",
+      "value":"Color( 0.55, 0.27, 0.07, 1 )"
+    },
+    {
+      "name":"salmon",
+      "value":"Color( 0.98, 0.5, 0.45, 1 )"
+    },
+    {
+      "name":"sandybrown",
+      "value":"Color( 0.96, 0.64, 0.38, 1 )"
+    },
+    {
+      "name":"seagreen",
+      "value":"Color( 0.18, 0.55, 0.34, 1 )"
+    },
+    {
+      "name":"seashell",
+      "value":"Color( 1, 0.96, 0.93, 1 )"
+    },
+    {
+      "name":"sienna",
+      "value":"Color( 0.63, 0.32, 0.18, 1 )"
+    },
+    {
+      "name":"silver",
+      "value":"Color( 0.75, 0.75, 0.75, 1 )"
+    },
+    {
+      "name":"skyblue",
+      "value":"Color( 0.53, 0.81, 0.92, 1 )"
+    },
+    {
+      "name":"slateblue",
+      "value":"Color( 0.42, 0.35, 0.8, 1 )"
+    },
+    {
+      "name":"slategray",
+      "value":"Color( 0.44, 0.5, 0.56, 1 )"
+    },
+    {
+      "name":"snow",
+      "value":"Color( 1, 0.98, 0.98, 1 )"
+    },
+    {
+      "name":"springgreen",
+      "value":"Color( 0, 1, 0.5, 1 )"
+    },
+    {
+      "name":"steelblue",
+      "value":"Color( 0.27, 0.51, 0.71, 1 )"
+    },
+    {
+      "name":"tan",
+      "value":"Color( 0.82, 0.71, 0.55, 1 )"
+    },
+    {
+      "name":"teal",
+      "value":"Color( 0, 0.5, 0.5, 1 )"
+    },
+    {
+      "name":"thistle",
+      "value":"Color( 0.85, 0.75, 0.85, 1 )"
+    },
+    {
+      "name":"tomato",
+      "value":"Color( 1, 0.39, 0.28, 1 )"
+    },
+    {
+      "name":"turquoise",
+      "value":"Color( 0.25, 0.88, 0.82, 1 )"
+    },
+    {
+      "name":"violet",
+      "value":"Color( 0.93, 0.51, 0.93, 1 )"
+    },
+    {
+      "name":"webgray",
+      "value":"Color( 0.5, 0.5, 0.5, 1 )"
+    },
+    {
+      "name":"webgreen",
+      "value":"Color( 0, 0.5, 0, 1 )"
+    },
+    {
+      "name":"webmaroon",
+      "value":"Color( 0.5, 0, 0, 1 )"
+    },
+    {
+      "name":"webpurple",
+      "value":"Color( 0.5, 0, 0.5, 1 )"
+    },
+    {
+      "name":"wheat",
+      "value":"Color( 0.96, 0.87, 0.7, 1 )"
+    },
+    {
+      "name":"white",
+      "value":"Color( 1, 1, 1, 1 )"
+    },
+    {
+      "name":"whitesmoke",
+      "value":"Color( 0.96, 0.96, 0.96, 1 )"
+    },
+    {
+      "name":"yellow",
+      "value":"Color( 1, 1, 0, 1 )"
+    },
+    {
+      "name":"yellowgreen",
+      "value":"Color( 0.6, 0.8, 0.2, 1 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Color",
@@ -68,6 +649,29 @@
         {
           "name":"amount",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Color",
+      "name":"from_hsv",
+      "args":[
+        {
+          "name":"h",
+          "type":"float"
+        },
+        {
+          "name":"s",
+          "type":"float"
+        },
+        {
+          "name":"v",
+          "type":"float"
+        },
+        {
+          "name":"a",
+          "type":"float",
+          "default":"1"
         }
       ]
     },
@@ -105,7 +709,19 @@
     },
     {
       "returns":"int",
+      "name":"to_abgr32"
+    },
+    {
+      "returns":"int",
+      "name":"to_abgr64"
+    },
+    {
+      "returns":"int",
       "name":"to_argb32"
+    },
+    {
+      "returns":"int",
+      "name":"to_argb64"
     },
     {
       "returns":"String",
@@ -121,6 +737,10 @@
     {
       "returns":"int",
       "name":"to_rgba32"
+    },
+    {
+      "returns":"int",
+      "name":"to_rgba64"
     }
   ],
   "name":"Color",

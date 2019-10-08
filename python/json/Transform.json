@@ -9,7 +9,24 @@
       "type":"Vector3"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"IDENTITY",
+      "value":"Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )"
+    },
+    {
+      "name":"FLIP_X",
+      "value":"Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )"
+    },
+    {
+      "name":"FLIP_Y",
+      "value":"Transform( 1, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0 )"
+    },
+    {
+      "name":"FLIP_Z",
+      "value":"Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Transform",
@@ -86,22 +103,22 @@
       ]
     },
     {
-      "returns":"var",
+      "returns":"Variant",
       "name":"xform",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
     {
-      "returns":"var",
+      "returns":"Variant",
       "name":"xform_inv",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     }

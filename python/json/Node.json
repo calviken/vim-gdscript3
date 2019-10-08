@@ -1,8 +1,16 @@
 {
   "members":[
     {
+      "name":"custom_multiplayer",
+      "type":"MultiplayerAPI"
+    },
+    {
       "name":"filename",
       "type":"String"
+    },
+    {
+      "name":"multiplayer",
+      "type":"MultiplayerAPI"
     },
     {
       "name":"name",
@@ -87,31 +95,6 @@
       "value":"26"
     },
     {
-      "name":"RPC_MODE_DISABLED",
-      "value":"0",
-      "type":"RPCMode"
-    },
-    {
-      "name":"RPC_MODE_REMOTE",
-      "value":"1",
-      "type":"RPCMode"
-    },
-    {
-      "name":"RPC_MODE_SYNC",
-      "value":"2",
-      "type":"RPCMode"
-    },
-    {
-      "name":"RPC_MODE_MASTER",
-      "value":"3",
-      "type":"RPCMode"
-    },
-    {
-      "name":"RPC_MODE_SLAVE",
-      "value":"4",
-      "type":"RPCMode"
-    },
-    {
       "name":"PAUSE_MODE_INHERIT",
       "value":"0",
       "type":"PauseMode"
@@ -156,6 +139,11 @@
     {
       "returns":"void",
       "name":"_exit_tree",
+      "qualifiers":"virtual"
+    },
+    {
+      "returns":"String",
+      "name":"_get_configuration_warning",
       "qualifiers":"virtual"
     },
     {
@@ -307,6 +295,17 @@
     },
     {
       "returns":"Node",
+      "name":"find_parent",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"mask",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"Node",
       "name":"get_child",
       "qualifiers":"const",
       "args":[
@@ -355,6 +354,17 @@
     {
       "returns":"Array",
       "name":"get_node_and_resource",
+      "args":[
+        {
+          "name":"path",
+          "type":"NodePath"
+        }
+      ]
+    },
+    {
+      "returns":"Node",
+      "name":"get_node_or_null",
+      "qualifiers":"const",
       "args":[
         {
           "name":"path",
@@ -539,6 +549,10 @@
     {
       "returns":"void",
       "name":"print_tree"
+    },
+    {
+      "returns":"void",
+      "name":"print_tree_pretty"
     },
     {
       "returns":"void",
@@ -837,6 +851,16 @@
         {
           "name":"enable",
           "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_process_priority",
+      "args":[
+        {
+          "name":"priority",
+          "type":"int"
         }
       ]
     },

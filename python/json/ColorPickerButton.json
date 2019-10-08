@@ -13,13 +13,11 @@
   "methods":[
     {
       "returns":"ColorPicker",
-      "name":"get_picker",
-      "qualifiers":"const"
+      "name":"get_picker"
     },
     {
       "returns":"PopupPanel",
-      "name":"get_popup",
-      "qualifiers":"const"
+      "name":"get_popup"
     }
   ],
   "name":"ColorPickerButton",

@@ -7,6 +7,14 @@
   ],
   "constants":[
     {
+      "name":"MAX_WIDTH",
+      "value":"16384"
+    },
+    {
+      "name":"MAX_HEIGHT",
+      "value":"16384"
+    },
+    {
       "name":"FORMAT_L8",
       "value":"0",
       "type":"Format"
@@ -212,6 +220,11 @@
       "type":"Interpolation"
     },
     {
+      "name":"INTERPOLATE_TRILINEAR",
+      "value":"3",
+      "type":"Interpolation"
+    },
+    {
       "name":"ALPHA_NONE",
       "value":"0",
       "type":"AlphaMode"
@@ -345,6 +358,17 @@
         {
           "name":"dst",
           "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"bumpmap_to_normalmap",
+      "args":[
+        {
+          "name":"bump_scale",
+          "type":"float",
+          "default":"1.0"
         }
       ]
     },
@@ -489,7 +513,14 @@
     },
     {
       "returns":"int",
-      "name":"generate_mipmaps"
+      "name":"generate_mipmaps",
+      "args":[
+        {
+          "name":"renormalize",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
     },
     {
       "returns":"PoolByteArray",
@@ -529,6 +560,17 @@
         {
           "name":"y",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Color",
+      "name":"get_pixelv",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"src",
+          "type":"Vector2"
         }
       ]
     },
@@ -609,6 +651,16 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"load_webp_from_buffer",
+      "args":[
+        {
+          "name":"buffer",
+          "type":"PoolByteArray"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"lock"
     },
@@ -651,6 +703,10 @@
       ]
     },
     {
+      "returns":"Image",
+      "name":"rgbe_to_srgb"
+    },
+    {
       "returns":"int",
       "name":"save_png",
       "qualifiers":"const",
@@ -672,6 +728,20 @@
         {
           "name":"y",
           "type":"int"
+        },
+        {
+          "name":"color",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_pixelv",
+      "args":[
+        {
+          "name":"dst",
+          "type":"Vector2"
         },
         {
           "name":"color",

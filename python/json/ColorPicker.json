@@ -5,6 +5,10 @@
       "type":"Color"
     },
     {
+      "name":"deferred_mode",
+      "type":"bool"
+    },
+    {
       "name":"edit_alpha",
       "type":"bool"
     },
@@ -24,6 +28,21 @@
           "type":"Color"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"erase_preset",
+      "args":[
+        {
+          "name":"color",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"PoolColorArray",
+      "name":"get_presets",
+      "qualifiers":"const"
     }
   ],
   "name":"ColorPicker",

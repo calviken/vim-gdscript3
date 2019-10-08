@@ -117,28 +117,33 @@
       "type":"ItemType"
     },
     {
-      "name":"ITEM_ALIGN",
+      "name":"ITEM_STRIKETHROUGH",
       "value":"7",
       "type":"ItemType"
     },
     {
-      "name":"ITEM_INDENT",
+      "name":"ITEM_ALIGN",
       "value":"8",
       "type":"ItemType"
     },
     {
-      "name":"ITEM_LIST",
+      "name":"ITEM_INDENT",
       "value":"9",
       "type":"ItemType"
     },
     {
-      "name":"ITEM_TABLE",
+      "name":"ITEM_LIST",
       "value":"10",
       "type":"ItemType"
     },
     {
-      "name":"ITEM_META",
+      "name":"ITEM_TABLE",
       "value":"11",
+      "type":"ItemType"
+    },
+    {
+      "name":"ITEM_META",
+      "value":"12",
       "type":"ItemType"
     }
   ],
@@ -176,6 +181,10 @@
     {
       "returns":"void",
       "name":"clear"
+    },
+    {
+      "returns":"int",
+      "name":"get_content_height"
     },
     {
       "returns":"int",
@@ -277,6 +286,10 @@
           "type":"Variant"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"push_strikethrough"
     },
     {
       "returns":"void",

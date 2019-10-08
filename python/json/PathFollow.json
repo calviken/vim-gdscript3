@@ -49,6 +49,11 @@
       "name":"ROTATION_XYZ",
       "value":"3",
       "type":"RotationMode"
+    },
+    {
+      "name":"ROTATION_ORIENTED",
+      "value":"4",
+      "type":"RotationMode"
     }
   ],
   "methods":[],

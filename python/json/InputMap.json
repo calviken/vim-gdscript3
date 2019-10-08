@@ -31,6 +31,16 @@
       ]
     },
     {
+      "returns":"void",
+      "name":"action_erase_events",
+      "args":[
+        {
+          "name":"action",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"bool",
       "name":"action_has_event",
       "args":[
@@ -46,11 +56,30 @@
     },
     {
       "returns":"void",
+      "name":"action_set_deadzone",
+      "args":[
+        {
+          "name":"action",
+          "type":"String"
+        },
+        {
+          "name":"deadzone",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"add_action",
       "args":[
         {
           "name":"action",
           "type":"String"
+        },
+        {
+          "name":"deadzone",
+          "type":"float",
+          "default":"0.5"
         }
       ]
     },

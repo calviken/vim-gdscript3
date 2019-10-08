@@ -118,8 +118,27 @@
       "name":"clear"
     },
     {
+      "returns":"void",
+      "name":"fix_invalid_tiles"
+    },
+    {
       "returns":"int",
       "name":"get_cell",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"x",
+          "type":"int"
+        },
+        {
+          "name":"y",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"get_cell_autotile_coord",
       "qualifiers":"const",
       "args":[
         {
@@ -366,6 +385,10 @@
           "default":"Vector2( 0, 0 )"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"update_dirty_quadrants"
     },
     {
       "returns":"Vector2",

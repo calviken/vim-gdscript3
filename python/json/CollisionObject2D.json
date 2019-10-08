@@ -42,6 +42,17 @@
       "qualifiers":"const"
     },
     {
+      "returns":"float",
+      "name":"get_shape_owner_one_way_collision_margin",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"owner_id",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"Array",
       "name":"get_shape_owners"
     },
@@ -214,6 +225,20 @@
         {
           "name":"enable",
           "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"shape_owner_set_one_way_collision_margin",
+      "args":[
+        {
+          "name":"owner_id",
+          "type":"int"
+        },
+        {
+          "name":"margin",
+          "type":"float"
         }
       ]
     },

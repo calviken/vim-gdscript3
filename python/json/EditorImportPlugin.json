@@ -97,11 +97,11 @@
           "type":"Dictionary"
         },
         {
-          "name":"r_platform_variants",
+          "name":"platform_variants",
           "type":"Array"
         },
         {
-          "name":"r_gen_files",
+          "name":"gen_files",
           "type":"Array"
         }
       ]

@@ -45,6 +45,10 @@
       "type":"bool"
     },
     {
+      "name":"window_per_pixel_transparency_enabled",
+      "type":"bool"
+    },
+    {
       "name":"window_position",
       "type":"Vector2"
     },
@@ -58,6 +62,16 @@
     }
   ],
   "constants":[
+    {
+      "name":"VIDEO_DRIVER_GLES2",
+      "value":"1",
+      "type":"VideoDriver"
+    },
+    {
+      "name":"VIDEO_DRIVER_GLES3",
+      "value":"0",
+      "type":"VideoDriver"
+    },
     {
       "name":"DAY_SUNDAY",
       "value":"0",
@@ -286,6 +300,10 @@
     },
     {
       "returns":"void",
+      "name":"close_midi_inputs"
+    },
+    {
+      "returns":"void",
       "name":"delay_msec",
       "qualifiers":"const",
       "args":[
@@ -361,8 +379,33 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"get_audio_driver_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_audio_driver_name",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"driver",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"PoolStringArray",
       "name":"get_cmdline_args"
+    },
+    {
+      "returns":"PoolStringArray",
+      "name":"get_connected_midi_inputs"
+    },
+    {
+      "returns":"int",
+      "name":"get_current_video_driver",
+      "qualifiers":"const"
     },
     {
       "returns":"Dictionary",
@@ -418,6 +461,16 @@
     {
       "returns":"String",
       "name":"get_executable_path",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Vector2",
+      "name":"get_ime_selection",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_ime_text",
       "qualifiers":"const"
     },
     {
@@ -547,12 +600,22 @@
     },
     {
       "returns":"int",
+      "name":"get_system_time_msecs",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"int",
       "name":"get_system_time_secs",
       "qualifiers":"const"
     },
     {
       "returns":"int",
       "name":"get_ticks_msec",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"int",
+      "name":"get_ticks_usec",
       "qualifiers":"const"
     },
     {
@@ -600,7 +663,28 @@
     },
     {
       "returns":"int",
+      "name":"get_video_driver_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_video_driver_name",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"driver",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
       "name":"get_virtual_keyboard_height"
+    },
+    {
+      "returns":"Rect2",
+      "name":"get_window_safe_area",
+      "qualifiers":"const"
     },
     {
       "returns":"bool",
@@ -670,6 +754,11 @@
       "qualifiers":"const"
     },
     {
+      "returns":"bool",
+      "name":"is_window_always_on_top",
+      "qualifiers":"const"
+    },
+    {
       "returns":"int",
       "name":"kill",
       "args":[
@@ -678,6 +767,10 @@
           "type":"int"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"move_window_to_foreground"
     },
     {
       "returns":"bool",
@@ -716,6 +809,10 @@
     {
       "returns":"void",
       "name":"native_video_unpause"
+    },
+    {
+      "returns":"void",
+      "name":"open_midi_inputs"
     },
     {
       "returns":"void",
@@ -758,12 +855,32 @@
       "name":"request_attention"
     },
     {
+      "returns":"bool",
+      "name":"request_permission",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"set_icon",
       "args":[
         {
           "name":"icon",
           "type":"Image"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_ime_active",
+      "args":[
+        {
+          "name":"active",
+          "type":"bool"
         }
       ]
     },
@@ -790,6 +907,16 @@
     {
       "returns":"void",
       "name":"set_use_file_access_save_and_swap",
+      "args":[
+        {
+          "name":"enabled",
+          "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_window_always_on_top",
       "args":[
         {
           "name":"enabled",

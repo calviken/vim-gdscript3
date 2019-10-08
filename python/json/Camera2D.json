@@ -81,6 +81,10 @@
       "type":"float"
     },
     {
+      "name":"process_mode",
+      "type":"Camera2D.Camera2DProcessMode"
+    },
+    {
       "name":"rotating",
       "type":"bool"
     },
@@ -107,6 +111,16 @@
       "name":"ANCHOR_MODE_DRAG_CENTER",
       "value":"1",
       "type":"AnchorMode"
+    },
+    {
+      "name":"CAMERA2D_PROCESS_PHYSICS",
+      "value":"0",
+      "type":"Camera2DProcessMode"
+    },
+    {
+      "name":"CAMERA2D_PROCESS_IDLE",
+      "value":"1",
+      "type":"Camera2DProcessMode"
     }
   ],
   "methods":[

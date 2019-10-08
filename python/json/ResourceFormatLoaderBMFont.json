@@ -1,0 +1,7 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[],
+  "name":"ResourceFormatLoaderBMFont",
+  "inherits":"ResourceFormatLoader"
+}

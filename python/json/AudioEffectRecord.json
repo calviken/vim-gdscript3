@@ -1,0 +1,33 @@
+{
+  "members":[
+    {
+      "name":"format",
+      "type":"AudioStreamSample.Format"
+    }
+  ],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"AudioStreamSample",
+      "name":"get_recording",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"is_recording_active",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"void",
+      "name":"set_recording_active",
+      "args":[
+        {
+          "name":"record",
+          "type":"bool"
+        }
+      ]
+    }
+  ],
+  "name":"AudioEffectRecord",
+  "inherits":"AudioEffect"
+}

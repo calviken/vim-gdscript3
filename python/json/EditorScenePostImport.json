@@ -3,7 +3,17 @@
   "constants":[],
   "methods":[
     {
-      "returns":"void",
+      "returns":"String",
+      "name":"get_source_file",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_source_folder",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Object",
       "name":"post_import",
       "qualifiers":"virtual",
       "args":[

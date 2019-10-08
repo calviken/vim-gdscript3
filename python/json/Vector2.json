@@ -9,7 +9,36 @@
       "type":"float"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"ZERO",
+      "value":"Vector2( 0, 0 )"
+    },
+    {
+      "name":"ONE",
+      "value":"Vector2( 1, 1 )"
+    },
+    {
+      "name":"INF",
+      "value":"Vector2( inf, inf )"
+    },
+    {
+      "name":"LEFT",
+      "value":"Vector2( -1, 0 )"
+    },
+    {
+      "name":"RIGHT",
+      "value":"Vector2( 1, 0 )"
+    },
+    {
+      "name":"UP",
+      "value":"Vector2( 0, -1 )"
+    },
+    {
+      "name":"DOWN",
+      "value":"Vector2( 0, 1 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Vector2",
@@ -55,11 +84,25 @@
     },
     {
       "returns":"Vector2",
+      "name":"ceil"
+    },
+    {
+      "returns":"Vector2",
       "name":"clamped",
       "args":[
         {
           "name":"length",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"float",
+      "name":"cross",
+      "args":[
+        {
+          "name":"with",
+          "type":"Vector2"
         }
       ]
     },
@@ -82,6 +125,16 @@
         {
           "name":"t",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"direction_to",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector2"
         }
       ]
     },
@@ -151,6 +204,16 @@
     },
     {
       "returns":"Vector2",
+      "name":"project",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
       "name":"reflect",
       "args":[
         {
@@ -165,6 +228,24 @@
       "args":[
         {
           "name":"phi",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"round"
+    },
+    {
+      "returns":"Vector2",
+      "name":"slerp",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector2"
+        },
+        {
+          "name":"t",
           "type":"float"
         }
       ]

@@ -1,6 +1,10 @@
 {
   "members":[
     {
+      "name":"primary_interface",
+      "type":"ARVRInterface"
+    },
+    {
       "name":"world_scale",
       "type":"float"
     }
@@ -79,6 +83,10 @@
       ]
     },
     {
+      "returns":"Transform",
+      "name":"get_hmd_transform"
+    },
+    {
       "returns":"ARVRInterface",
       "name":"get_interface",
       "qualifiers":"const",
@@ -100,6 +108,18 @@
       "qualifiers":"const"
     },
     {
+      "returns":"int",
+      "name":"get_last_commit_usec"
+    },
+    {
+      "returns":"int",
+      "name":"get_last_frame_usec"
+    },
+    {
+      "returns":"int",
+      "name":"get_last_process_usec"
+    },
+    {
       "returns":"Transform",
       "name":"get_reference_frame",
       "qualifiers":"const"
@@ -119,16 +139,6 @@
       "returns":"int",
       "name":"get_tracker_count",
       "qualifiers":"const"
-    },
-    {
-      "returns":"void",
-      "name":"set_primary_interface",
-      "args":[
-        {
-          "name":"interface",
-          "type":"ARVRInterface"
-        }
-      ]
     }
   ],
   "name":"ARVRServer",

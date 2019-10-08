@@ -206,12 +206,38 @@
       ]
     },
     {
+      "returns":"bool",
+      "name":"is_point_disabled",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"remove_point",
       "args":[
         {
           "name":"id",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_point_disabled",
+      "args":[
+        {
+          "name":"id",
+          "type":"int"
+        },
+        {
+          "name":"disabled",
+          "type":"bool",
+          "default":"true"
         }
       ]
     },

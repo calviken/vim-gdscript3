@@ -30,6 +30,11 @@
       "name":"FLAG_COMPRESS",
       "value":"32",
       "type":"SaverFlags"
+    },
+    {
+      "name":"FLAG_REPLACE_SUBRESOURCE_PATHS",
+      "value":"64",
+      "type":"SaverFlags"
     }
   ],
   "methods":[

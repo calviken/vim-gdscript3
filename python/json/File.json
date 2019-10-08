@@ -168,6 +168,16 @@
       "name":"get_pascal_string"
     },
     {
+      "returns":"String",
+      "name":"get_path",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_path_absolute",
+      "qualifiers":"const"
+    },
+    {
       "returns":"int",
       "name":"get_position",
       "qualifiers":"const"
@@ -191,7 +201,14 @@
     {
       "returns":"Variant",
       "name":"get_var",
-      "qualifiers":"const"
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"allow_objects",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
     },
     {
       "returns":"bool",
@@ -340,6 +357,21 @@
     },
     {
       "returns":"void",
+      "name":"store_csv_line",
+      "args":[
+        {
+          "name":"values",
+          "type":"PoolStringArray"
+        },
+        {
+          "name":"delim",
+          "type":"String",
+          "default":"\",\""
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"store_double",
       "args":[
         {
@@ -405,6 +437,11 @@
         {
           "name":"value",
           "type":"Variant"
+        },
+        {
+          "name":"full_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     }

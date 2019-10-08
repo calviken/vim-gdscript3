@@ -1,0 +1,28 @@
+{
+  "members":[
+    {
+      "name":"animation_path",
+      "type":"NodePath"
+    },
+    {
+      "name":"cell_size",
+      "type":"float"
+    },
+    {
+      "name":"color",
+      "type":"Color"
+    },
+    {
+      "name":"radius",
+      "type":"float"
+    },
+    {
+      "name":"zero_y",
+      "type":"bool"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"RootMotionView",
+  "inherits":"VisualInstance"
+}

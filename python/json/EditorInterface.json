@@ -29,6 +29,11 @@
       "name":"get_editor_viewport"
     },
     {
+      "returns":"EditorInspector",
+      "name":"get_inspector",
+      "qualifiers":"const"
+    },
+    {
       "returns":"Array",
       "name":"get_open_scenes",
       "qualifiers":"const"
@@ -138,7 +143,7 @@
       "name":"select_file",
       "args":[
         {
-          "name":"p_file",
+          "name":"file",
           "type":"String"
         }
       ]

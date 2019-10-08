@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"sync",
+      "type":"bool"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"AnimationNodeAdd3",
+  "inherits":"AnimationNode"
+}

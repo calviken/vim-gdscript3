@@ -9,6 +9,10 @@
       "type":"Control.FocusMode"
     },
     {
+      "name":"scrollable",
+      "type":"bool"
+    },
+    {
       "name":"tick_count",
       "type":"int"
     },

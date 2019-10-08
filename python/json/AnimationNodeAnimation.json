@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"animation",
+      "type":"String"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"AnimationNodeAnimation",
+  "inherits":"AnimationRootNode"
+}

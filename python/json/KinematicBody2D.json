@@ -3,6 +3,10 @@
     {
       "name":"collision/safe_margin",
       "type":"float"
+    },
+    {
+      "name":"motion/sync_to_physics",
+      "type":"bool"
     }
   ],
   "constants":[],
@@ -49,6 +53,21 @@
         {
           "name":"rel_vec",
           "type":"Vector2"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"exclude_raycast_shapes",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"test_only",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -66,12 +85,12 @@
           "default":"Vector2( 0, 0 )"
         },
         {
-          "name":"slope_stop_min_velocity",
-          "type":"float",
-          "default":"5"
+          "name":"stop_on_slope",
+          "type":"bool",
+          "default":"false"
         },
         {
-          "name":"max_bounces",
+          "name":"max_slides",
           "type":"int",
           "default":"4"
         },
@@ -79,6 +98,50 @@
           "name":"floor_max_angle",
           "type":"float",
           "default":"0.785398"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"move_and_slide_with_snap",
+      "args":[
+        {
+          "name":"linear_velocity",
+          "type":"Vector2"
+        },
+        {
+          "name":"snap",
+          "type":"Vector2"
+        },
+        {
+          "name":"floor_normal",
+          "type":"Vector2",
+          "default":"Vector2( 0, 0 )"
+        },
+        {
+          "name":"stop_on_slope",
+          "type":"bool",
+          "default":"false"
+        },
+        {
+          "name":"max_slides",
+          "type":"int",
+          "default":"4"
+        },
+        {
+          "name":"floor_max_angle",
+          "type":"float",
+          "default":"0.785398"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
         }
       ]
     },
@@ -93,6 +156,11 @@
         {
           "name":"rel_vec",
           "type":"Vector2"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
         }
       ]
     }

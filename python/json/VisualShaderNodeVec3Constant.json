@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"constant",
+      "type":"Vector3"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeVec3Constant",
+  "inherits":"VisualShaderNode"
+}

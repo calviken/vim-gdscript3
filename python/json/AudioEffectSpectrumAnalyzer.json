@@ -1,0 +1,20 @@
+{
+  "members":[
+    {
+      "name":"buffer_length",
+      "type":"float"
+    },
+    {
+      "name":"fft_size",
+      "type":"AudioEffectSpectrumAnalyzer.FFT_Size"
+    },
+    {
+      "name":"tap_back_pos",
+      "type":"float"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"AudioEffectSpectrumAnalyzer",
+  "inherits":"AudioEffect"
+}

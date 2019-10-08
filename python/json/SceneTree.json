@@ -17,6 +17,14 @@
       "type":"Node"
     },
     {
+      "name":"multiplayer",
+      "type":"MultiplayerAPI"
+    },
+    {
+      "name":"multiplayer_poll",
+      "type":"bool"
+    },
+    {
       "name":"network_peer",
       "type":"NetworkedMultiplayerPeer"
     },

@@ -7,6 +7,11 @@
       "type":"SpeakerMode"
     },
     {
+      "name":"SPEAKER_SURROUND_31",
+      "value":"1",
+      "type":"SpeakerMode"
+    },
+    {
       "name":"SPEAKER_SURROUND_51",
       "value":"2",
       "type":"SpeakerMode"
@@ -49,9 +54,38 @@
       ]
     },
     {
+      "returns":"String",
+      "name":"capture_get_device"
+    },
+    {
+      "returns":"Array",
+      "name":"capture_get_device_list"
+    },
+    {
+      "returns":"void",
+      "name":"capture_set_device",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"AudioBusLayout",
       "name":"generate_bus_layout",
       "qualifiers":"const"
+    },
+    {
+      "returns":"int",
+      "name":"get_bus_channels",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"bus_idx",
+          "type":"int"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -79,6 +113,25 @@
         {
           "name":"bus_idx",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"AudioEffectInstance",
+      "name":"get_bus_effect_instance",
+      "args":[
+        {
+          "name":"bus_idx",
+          "type":"int"
+        },
+        {
+          "name":"effect_idx",
+          "type":"int"
+        },
+        {
+          "name":"channel",
+          "type":"int",
+          "default":"0"
         }
       ]
     },
@@ -155,6 +208,14 @@
           "type":"int"
         }
       ]
+    },
+    {
+      "returns":"String",
+      "name":"get_device"
+    },
+    {
+      "returns":"Array",
+      "name":"get_device_list"
     },
     {
       "returns":"float",
@@ -375,6 +436,16 @@
         {
           "name":"volume_db",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_device",
+      "args":[
+        {
+          "name":"device",
+          "type":"String"
         }
       ]
     },

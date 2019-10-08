@@ -1,11 +1,35 @@
 {
   "members":[
     {
+      "name":"antialiased",
+      "type":"bool"
+    },
+    {
       "name":"font_path",
       "type":"String"
+    },
+    {
+      "name":"hinting",
+      "type":"DynamicFontData.Hinting"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"HINTING_NONE",
+      "value":"0",
+      "type":"Hinting"
+    },
+    {
+      "name":"HINTING_LIGHT",
+      "value":"1",
+      "type":"Hinting"
+    },
+    {
+      "name":"HINTING_NORMAL",
+      "value":"2",
+      "type":"Hinting"
+    }
+  ],
   "methods":[],
   "name":"DynamicFontData",
   "inherits":"Resource"

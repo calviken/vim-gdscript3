@@ -145,13 +145,9 @@
         {
           "name":"compress_flags",
           "type":"int",
-          "default":"97792"
+          "default":"97280"
         }
       ]
-    },
-    {
-      "returns":"void",
-      "name":"center_geometry"
     },
     {
       "returns":"void",
@@ -175,19 +171,14 @@
     },
     {
       "returns":"int",
-      "name":"get_surface_count",
-      "qualifiers":"const"
-    },
-    {
-      "returns":"int",
       "name":"lightmap_unwrap",
       "args":[
         {
-          "name":"arg0",
+          "name":"transform",
           "type":"Transform"
         },
         {
-          "name":"arg1",
+          "name":"texel_size",
           "type":"float"
         }
       ]
@@ -195,6 +186,17 @@
     {
       "returns":"void",
       "name":"regen_normalmaps"
+    },
+    {
+      "returns":"int",
+      "name":"surface_find_by_name",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -219,41 +221,8 @@
       ]
     },
     {
-      "returns":"Array",
-      "name":"surface_get_arrays",
-      "qualifiers":"const",
-      "args":[
-        {
-          "name":"surf_idx",
-          "type":"int"
-        }
-      ]
-    },
-    {
-      "returns":"Array",
-      "name":"surface_get_blend_shape_arrays",
-      "qualifiers":"const",
-      "args":[
-        {
-          "name":"surf_idx",
-          "type":"int"
-        }
-      ]
-    },
-    {
       "returns":"int",
       "name":"surface_get_format",
-      "qualifiers":"const",
-      "args":[
-        {
-          "name":"surf_idx",
-          "type":"int"
-        }
-      ]
-    },
-    {
-      "returns":"Material",
-      "name":"surface_get_material",
       "qualifiers":"const",
       "args":[
         {

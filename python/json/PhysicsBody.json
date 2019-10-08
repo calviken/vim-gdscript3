@@ -22,6 +22,10 @@
       ]
     },
     {
+      "returns":"Array",
+      "name":"get_collision_exceptions"
+    },
+    {
       "returns":"bool",
       "name":"get_collision_layer_bit",
       "qualifiers":"const",

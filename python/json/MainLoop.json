@@ -40,6 +40,14 @@
     {
       "name":"NOTIFICATION_WM_ABOUT",
       "value":"91"
+    },
+    {
+      "name":"NOTIFICATION_CRASH",
+      "value":"92"
+    },
+    {
+      "name":"NOTIFICATION_OS_IME_UPDATE",
+      "value":"93"
     }
   ],
   "methods":[
@@ -85,7 +93,7 @@
       "qualifiers":"virtual",
       "args":[
         {
-          "name":"ev",
+          "name":"event",
           "type":"InputEvent"
         }
       ]
@@ -135,7 +143,7 @@
       "name":"input_event",
       "args":[
         {
-          "name":"ev",
+          "name":"event",
           "type":"InputEvent"
         }
       ]

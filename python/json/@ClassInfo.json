@@ -38,11 +38,93 @@
     "name":"AnimatedSprite3D"
   },
   {
+    "name":"AnimatedTexture",
+    "exportable":true
+  },
+  {
     "name":"Animation",
     "exportable":true
   },
   {
+    "name":"AnimationNode",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeAdd2",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeAdd3",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeAnimation",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeBlend2",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeBlend3",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeBlendSpace1D",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeBlendSpace2D",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeBlendTree",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeOneShot",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeOutput",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeStateMachine",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeStateMachinePlayback",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeStateMachineTransition",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeTimeScale",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeTimeSeek",
+    "exportable":true
+  },
+  {
+    "name":"AnimationNodeTransition",
+    "exportable":true
+  },
+  {
     "name":"AnimationPlayer"
+  },
+  {
+    "name":"AnimationRootNode",
+    "exportable":true
+  },
+  {
+    "name":"AnimationTrackEditPlugin"
+  },
+  {
+    "name":"AnimationTree"
   },
   {
     "name":"AnimationTreePlayer"
@@ -131,6 +213,9 @@
     "exportable":true
   },
   {
+    "name":"AudioEffectInstance"
+  },
+  {
     "name":"AudioEffectLimiter",
     "exportable":true
   },
@@ -159,8 +244,19 @@
     "exportable":true
   },
   {
+    "name":"AudioEffectRecord",
+    "exportable":true
+  },
+  {
     "name":"AudioEffectReverb",
     "exportable":true
+  },
+  {
+    "name":"AudioEffectSpectrumAnalyzer",
+    "exportable":true
+  },
+  {
+    "name":"AudioEffectSpectrumAnalyzerInstance"
   },
   {
     "name":"AudioEffectStereoEnhance",
@@ -174,7 +270,21 @@
     "exportable":true
   },
   {
+    "name":"AudioStreamGenerator",
+    "exportable":true
+  },
+  {
+    "name":"AudioStreamGeneratorPlayback"
+  },
+  {
+    "name":"AudioStreamMicrophone",
+    "exportable":true
+  },
+  {
     "name":"AudioStreamPlayback"
+  },
+  {
+    "name":"AudioStreamPlaybackResampled"
   },
   {
     "name":"AudioStreamPlayer"
@@ -220,6 +330,9 @@
     "exportable":true
   },
   {
+    "name":"Bone2D"
+  },
+  {
     "name":"BoneAttachment"
   },
   {
@@ -235,6 +348,12 @@
   {
     "name":"ButtonGroup",
     "exportable":true
+  },
+  {
+    "name":"CPUParticles"
+  },
+  {
+    "name":"CPUParticles2D"
   },
   {
     "name":"Camera"
@@ -282,6 +401,9 @@
   },
   {
     "name":"ClassDB"
+  },
+  {
+    "name":"ClippedCamera"
   },
   {
     "name":"CollisionObject"
@@ -375,6 +497,10 @@
     "exportable":true
   },
   {
+    "name":"CylinderShape",
+    "exportable":true
+  },
+  {
     "name":"DampedSpringJoint2D"
   },
   {
@@ -412,10 +538,19 @@
     "name":"EditorImportPlugin"
   },
   {
+    "name":"EditorInspector"
+  },
+  {
+    "name":"EditorInspectorPlugin"
+  },
+  {
     "name":"EditorInterface"
   },
   {
     "name":"EditorPlugin"
+  },
+  {
+    "name":"EditorProperty"
   },
   {
     "name":"EditorResourceConversionPlugin"
@@ -446,6 +581,10 @@
     "name":"EditorSpatialGizmo"
   },
   {
+    "name":"EditorSpatialGizmoPlugin",
+    "exportable":true
+  },
+  {
     "name":"EncodedObjectAsID"
   },
   {
@@ -454,6 +593,9 @@
   {
     "name":"Environment",
     "exportable":true
+  },
+  {
+    "name":"Expression"
   },
   {
     "name":"File"
@@ -467,6 +609,12 @@
   },
   {
     "name":"FuncRef"
+  },
+  {
+    "name":"GDNativeLibraryResourceLoader"
+  },
+  {
+    "name":"GDNativeLibraryResourceSaver"
   },
   {
     "name":"GIProbe"
@@ -526,6 +674,10 @@
     "name":"HTTPRequest"
   },
   {
+    "name":"HeightMapShape",
+    "exportable":true
+  },
+  {
     "name":"HingeJoint"
   },
   {
@@ -573,6 +725,10 @@
   },
   {
     "name":"InputEventKey",
+    "exportable":true
+  },
+  {
+    "name":"InputEventMIDI",
     "exportable":true
   },
   {
@@ -705,6 +861,9 @@
     "name":"MeshInstance"
   },
   {
+    "name":"MeshInstance2D"
+  },
+  {
     "name":"MeshLibrary",
     "exportable":true
   },
@@ -714,6 +873,9 @@
   },
   {
     "name":"MultiMeshInstance"
+  },
+  {
+    "name":"MultiplayerAPI"
   },
   {
     "name":"Mutex"
@@ -845,6 +1007,9 @@
     "name":"Performance"
   },
   {
+    "name":"PhysicalBone"
+  },
+  {
     "name":"Physics2DDirectBodyState"
   },
   {
@@ -879,6 +1044,10 @@
   },
   {
     "name":"PhysicsDirectSpaceState"
+  },
+  {
+    "name":"PhysicsMaterial",
+    "exportable":true
   },
   {
     "name":"PhysicsServer"
@@ -1008,6 +1177,9 @@
     "exportable":true
   },
   {
+    "name":"RandomNumberGenerator"
+  },
+  {
     "name":"Range"
   },
   {
@@ -1053,6 +1225,75 @@
     "exportable":true
   },
   {
+    "name":"ResourceFormatDDS"
+  },
+  {
+    "name":"ResourceFormatImporter"
+  },
+  {
+    "name":"ResourceFormatLoader"
+  },
+  {
+    "name":"ResourceFormatLoaderBMFont"
+  },
+  {
+    "name":"ResourceFormatLoaderBinary"
+  },
+  {
+    "name":"ResourceFormatLoaderDynamicFont"
+  },
+  {
+    "name":"ResourceFormatLoaderGDScript"
+  },
+  {
+    "name":"ResourceFormatLoaderImage"
+  },
+  {
+    "name":"ResourceFormatLoaderNativeScript"
+  },
+  {
+    "name":"ResourceFormatLoaderShader"
+  },
+  {
+    "name":"ResourceFormatLoaderStreamTexture"
+  },
+  {
+    "name":"ResourceFormatLoaderText"
+  },
+  {
+    "name":"ResourceFormatLoaderTextureLayered"
+  },
+  {
+    "name":"ResourceFormatLoaderTheora"
+  },
+  {
+    "name":"ResourceFormatLoaderWebm"
+  },
+  {
+    "name":"ResourceFormatPKM"
+  },
+  {
+    "name":"ResourceFormatPVR"
+  },
+  {
+    "name":"ResourceFormatSaver"
+  },
+  {
+    "name":"ResourceFormatSaverBinary"
+  },
+  {
+    "name":"ResourceFormatSaverGDScript"
+  },
+  {
+    "name":"ResourceFormatSaverNativeScript"
+  },
+  {
+    "name":"ResourceFormatSaverShader"
+  },
+  {
+    "name":"ResourceFormatSaverText"
+  },
+  {
     "name":"ResourceImporter"
   },
   {
@@ -1068,6 +1309,9 @@
     "name":"ResourceSaver"
   },
   {
+    "name":"ResourceSaverPNG"
+  },
+  {
     "name":"RichTextLabel"
   },
   {
@@ -1075,6 +1319,9 @@
   },
   {
     "name":"RigidBody2D"
+  },
+  {
+    "name":"RootMotionView"
   },
   {
     "name":"SceneState"
@@ -1088,6 +1335,9 @@
   {
     "name":"Script",
     "exportable":true
+  },
+  {
+    "name":"ScriptCreateDialog"
   },
   {
     "name":"ScriptEditor"
@@ -1132,6 +1382,12 @@
     "name":"Skeleton"
   },
   {
+    "name":"Skeleton2D"
+  },
+  {
+    "name":"SkeletonIK"
+  },
+  {
     "name":"Sky",
     "exportable":true
   },
@@ -1140,6 +1396,9 @@
   },
   {
     "name":"SliderJoint"
+  },
+  {
+    "name":"SoftBody"
   },
   {
     "name":"Spatial"
@@ -1170,6 +1429,9 @@
   },
   {
     "name":"SpotLight"
+  },
+  {
+    "name":"SpringArm"
   },
   {
     "name":"Sprite"
@@ -1247,11 +1509,27 @@
     "name":"TextEdit"
   },
   {
+    "name":"TextFile",
+    "exportable":true
+  },
+  {
     "name":"Texture",
     "exportable":true
   },
   {
+    "name":"Texture3D",
+    "exportable":true
+  },
+  {
+    "name":"TextureArray",
+    "exportable":true
+  },
+  {
     "name":"TextureButton"
+  },
+  {
+    "name":"TextureLayered",
+    "exportable":true
   },
   {
     "name":"TextureProgress"
@@ -1295,6 +1573,9 @@
   {
     "name":"Translation",
     "exportable":true
+  },
+  {
+    "name":"TranslationLoaderPO"
   },
   {
     "name":"TranslationServer"
@@ -1382,6 +1663,134 @@
   },
   {
     "name":"VisualServer"
+  },
+  {
+    "name":"VisualShader",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNode",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeColorConstant",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeColorOp",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeColorUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeCubeMap",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeCubeMapUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeDotProduct",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeInput",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeOutput",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeScalarConstant",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeScalarFunc",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeScalarInterp",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeScalarOp",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeScalarUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTexture",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTextureUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformCompose",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformConstant",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformDecompose",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformMult",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeTransformVecMult",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeUniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVec3Constant",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVec3Uniform",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorCompose",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorDecompose",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorFunc",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorInterp",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorLen",
+    "exportable":true
+  },
+  {
+    "name":"VisualShaderNodeVectorOp",
+    "exportable":true
   },
   {
     "name":"WeakRef"

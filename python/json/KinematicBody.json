@@ -1,32 +1,20 @@
 {
   "members":[
     {
-      "name":"axis_lock_angular_x",
-      "type":"bool"
-    },
-    {
-      "name":"axis_lock_angular_y",
-      "type":"bool"
-    },
-    {
-      "name":"axis_lock_angular_z",
-      "type":"bool"
-    },
-    {
-      "name":"axis_lock_linear_x",
-      "type":"bool"
-    },
-    {
-      "name":"axis_lock_linear_y",
-      "type":"bool"
-    },
-    {
-      "name":"axis_lock_linear_z",
-      "type":"bool"
-    },
-    {
       "name":"collision/safe_margin",
       "type":"float"
+    },
+    {
+      "name":"move_lock_x",
+      "type":"bool"
+    },
+    {
+      "name":"move_lock_y",
+      "type":"bool"
+    },
+    {
+      "name":"move_lock_z",
+      "type":"bool"
     }
   ],
   "constants":[],
@@ -73,6 +61,21 @@
         {
           "name":"rel_vec",
           "type":"Vector3"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"exclude_raycast_shapes",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"test_only",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -90,9 +93,9 @@
           "default":"Vector3( 0, 0, 0 )"
         },
         {
-          "name":"slope_stop_min_velocity",
-          "type":"float",
-          "default":"0.05"
+          "name":"stop_on_slope",
+          "type":"bool",
+          "default":"false"
         },
         {
           "name":"max_slides",
@@ -103,6 +106,50 @@
           "name":"floor_max_angle",
           "type":"float",
           "default":"0.785398"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
+      "name":"move_and_slide_with_snap",
+      "args":[
+        {
+          "name":"linear_velocity",
+          "type":"Vector3"
+        },
+        {
+          "name":"snap",
+          "type":"Vector3"
+        },
+        {
+          "name":"floor_normal",
+          "type":"Vector3",
+          "default":"Vector3( 0, 0, 0 )"
+        },
+        {
+          "name":"stop_on_slope",
+          "type":"bool",
+          "default":"false"
+        },
+        {
+          "name":"max_slides",
+          "type":"int",
+          "default":"4"
+        },
+        {
+          "name":"floor_max_angle",
+          "type":"float",
+          "default":"0.785398"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
         }
       ]
     },
@@ -117,6 +164,11 @@
         {
           "name":"rel_vec",
           "type":"Vector3"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
         }
       ]
     }

@@ -106,7 +106,14 @@
     },
     {
       "returns":"void",
-      "name":"clear_history"
+      "name":"clear_history",
+      "args":[
+        {
+          "name":"increase_version",
+          "type":"bool",
+          "default":"true"
+        }
+      ]
     },
     {
       "returns":"void",
@@ -138,11 +145,16 @@
       "qualifiers":"const"
     },
     {
-      "returns":"void",
+      "returns":"bool",
+      "name":"is_commiting_action",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
       "name":"redo"
     },
     {
-      "returns":"void",
+      "returns":"bool",
       "name":"undo"
     }
   ],

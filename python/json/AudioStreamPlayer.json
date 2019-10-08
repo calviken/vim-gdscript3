@@ -13,12 +13,20 @@
       "type":"AudioStreamPlayer.MixTarget"
     },
     {
+      "name":"pitch_scale",
+      "type":"float"
+    },
+    {
       "name":"playing",
       "type":"bool"
     },
     {
       "name":"stream",
       "type":"AudioStream"
+    },
+    {
+      "name":"stream_paused",
+      "type":"bool"
     },
     {
       "name":"volume_db",
@@ -46,6 +54,10 @@
     {
       "returns":"float",
       "name":"get_playback_position"
+    },
+    {
+      "returns":"AudioStreamPlayback",
+      "name":"get_stream_playback"
     },
     {
       "returns":"void",

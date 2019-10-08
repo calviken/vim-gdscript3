@@ -71,7 +71,7 @@
       "qualifiers":"const"
     },
     {
-      "returns":"void",
+      "returns":"int",
       "name":"load",
       "args":[
         {

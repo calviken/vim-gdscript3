@@ -12,33 +12,43 @@
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_SPATIAL_EDITOR_SIDE",
+      "name":"CONTAINER_SPATIAL_EDITOR_SIDE_LEFT",
       "value":"2",
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_SPATIAL_EDITOR_BOTTOM",
+      "name":"CONTAINER_SPATIAL_EDITOR_SIDE_RIGHT",
       "value":"3",
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_CANVAS_EDITOR_MENU",
+      "name":"CONTAINER_SPATIAL_EDITOR_BOTTOM",
       "value":"4",
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_CANVAS_EDITOR_SIDE",
+      "name":"CONTAINER_CANVAS_EDITOR_MENU",
       "value":"5",
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_CANVAS_EDITOR_BOTTOM",
+      "name":"CONTAINER_CANVAS_EDITOR_SIDE_LEFT",
       "value":"6",
       "type":"CustomControlContainer"
     },
     {
-      "name":"CONTAINER_PROPERTY_EDITOR_BOTTOM",
+      "name":"CONTAINER_CANVAS_EDITOR_SIDE_RIGHT",
       "value":"7",
+      "type":"CustomControlContainer"
+    },
+    {
+      "name":"CONTAINER_CANVAS_EDITOR_BOTTOM",
+      "value":"8",
+      "type":"CustomControlContainer"
+    },
+    {
+      "name":"CONTAINER_PROPERTY_EDITOR_BOTTOM",
+      "value":"9",
       "type":"CustomControlContainer"
     },
     {
@@ -88,6 +98,20 @@
     }
   ],
   "methods":[
+    {
+      "returns":"void",
+      "name":"add_autoload_singleton",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        },
+        {
+          "name":"path",
+          "type":"String"
+        }
+      ]
+    },
     {
       "returns":"ToolButton",
       "name":"add_control_to_bottom_panel",
@@ -157,7 +181,7 @@
       "name":"add_export_plugin",
       "args":[
         {
-          "name":"exporter",
+          "name":"plugin",
           "type":"EditorExportPlugin"
         }
       ]
@@ -174,11 +198,54 @@
     },
     {
       "returns":"void",
+      "name":"add_inspector_plugin",
+      "args":[
+        {
+          "name":"plugin",
+          "type":"EditorInspectorPlugin"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"add_scene_import_plugin",
       "args":[
         {
           "name":"scene_importer",
           "type":"EditorSceneImporter"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_spatial_gizmo_plugin",
+      "args":[
+        {
+          "name":"plugin",
+          "type":"EditorSpatialGizmoPlugin"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_tool_menu_item",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        },
+        {
+          "name":"handler",
+          "type":"Object"
+        },
+        {
+          "name":"callback",
+          "type":"String"
+        },
+        {
+          "name":"ud",
+          "type":"Variant",
+          "default":"null"
         }
       ]
     },
@@ -202,20 +269,19 @@
       "qualifiers":"virtual"
     },
     {
+      "returns":"bool",
+      "name":"build",
+      "qualifiers":"virtual"
+    },
+    {
       "returns":"void",
       "name":"clear",
       "qualifiers":"virtual"
     },
     {
-      "returns":"EditorSpatialGizmo",
-      "name":"create_spatial_gizmo",
-      "qualifiers":"virtual",
-      "args":[
-        {
-          "name":"for_spatial",
-          "type":"Spatial"
-        }
-      ]
+      "returns":"void",
+      "name":"disable_plugin",
+      "qualifiers":"virtual"
     },
     {
       "returns":"void",
@@ -229,6 +295,33 @@
       ]
     },
     {
+      "returns":"void",
+      "name":"enable_plugin",
+      "qualifiers":"virtual"
+    },
+    {
+      "returns":"void",
+      "name":"forward_canvas_draw_over_viewport",
+      "qualifiers":"virtual",
+      "args":[
+        {
+          "name":"overlay",
+          "type":"Control"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"forward_canvas_force_draw_over_viewport",
+      "qualifiers":"virtual",
+      "args":[
+        {
+          "name":"overlay",
+          "type":"Control"
+        }
+      ]
+    },
+    {
       "returns":"bool",
       "name":"forward_canvas_gui_input",
       "qualifiers":"virtual",
@@ -236,28 +329,6 @@
         {
           "name":"event",
           "type":"InputEvent"
-        }
-      ]
-    },
-    {
-      "returns":"void",
-      "name":"forward_draw_over_viewport",
-      "qualifiers":"virtual",
-      "args":[
-        {
-          "name":"overlay",
-          "type":"Control"
-        }
-      ]
-    },
-    {
-      "returns":"void",
-      "name":"forward_force_draw_over_viewport",
-      "qualifiers":"virtual",
-      "args":[
-        {
-          "name":"overlay",
-          "type":"Control"
         }
       ]
     },
@@ -294,6 +365,10 @@
       "returns":"String",
       "name":"get_plugin_name",
       "qualifiers":"virtual"
+    },
+    {
+      "returns":"ScriptCreateDialog",
+      "name":"get_script_create_dialog"
     },
     {
       "returns":"Dictionary",
@@ -363,6 +438,16 @@
     },
     {
       "returns":"void",
+      "name":"remove_autoload_singleton",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"remove_control_from_bottom_panel",
       "args":[
         {
@@ -410,7 +495,7 @@
       "name":"remove_export_plugin",
       "args":[
         {
-          "name":"exporter",
+          "name":"plugin",
           "type":"EditorExportPlugin"
         }
       ]
@@ -427,11 +512,41 @@
     },
     {
       "returns":"void",
+      "name":"remove_inspector_plugin",
+      "args":[
+        {
+          "name":"plugin",
+          "type":"EditorInspectorPlugin"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"remove_scene_import_plugin",
       "args":[
         {
           "name":"scene_importer",
           "type":"EditorSceneImporter"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"remove_spatial_gizmo_plugin",
+      "args":[
+        {
+          "name":"plugin",
+          "type":"EditorSpatialGizmoPlugin"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"remove_tool_menu_item",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
         }
       ]
     },

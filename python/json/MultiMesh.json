@@ -5,6 +5,10 @@
       "type":"MultiMesh.ColorFormat"
     },
     {
+      "name":"custom_data_format",
+      "type":"MultiMesh.CustomDataFormat"
+    },
+    {
       "name":"instance_count",
       "type":"int"
     },
@@ -15,6 +19,10 @@
     {
       "name":"transform_format",
       "type":"MultiMesh.TransformFormat"
+    },
+    {
+      "name":"visible_instance_count",
+      "type":"int"
     }
   ],
   "constants":[
@@ -42,6 +50,21 @@
       "name":"COLOR_FLOAT",
       "value":"2",
       "type":"ColorFormat"
+    },
+    {
+      "name":"CUSTOM_DATA_NONE",
+      "value":"0",
+      "type":"CustomDataFormat"
+    },
+    {
+      "name":"CUSTOM_DATA_8BIT",
+      "value":"1",
+      "type":"CustomDataFormat"
+    },
+    {
+      "name":"CUSTOM_DATA_FLOAT",
+      "value":"2",
+      "type":"CustomDataFormat"
     }
   ],
   "methods":[
@@ -62,8 +85,30 @@
       ]
     },
     {
+      "returns":"Color",
+      "name":"get_instance_custom_data",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"instance",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"Transform",
       "name":"get_instance_transform",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"instance",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Transform2D",
+      "name":"get_instance_transform_2d",
       "qualifiers":"const",
       "args":[
         {
@@ -88,6 +133,20 @@
     },
     {
       "returns":"void",
+      "name":"set_instance_custom_data",
+      "args":[
+        {
+          "name":"instance",
+          "type":"int"
+        },
+        {
+          "name":"custom_data",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_instance_transform",
       "args":[
         {
@@ -97,6 +156,20 @@
         {
           "name":"transform",
           "type":"Transform"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_instance_transform_2d",
+      "args":[
+        {
+          "name":"instance",
+          "type":"int"
+        },
+        {
+          "name":"transform",
+          "type":"Transform2D"
         }
       ]
     }

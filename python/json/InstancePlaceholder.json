@@ -3,6 +3,22 @@
   "constants":[],
   "methods":[
     {
+      "returns":"Node",
+      "name":"create_instance",
+      "args":[
+        {
+          "name":"replace",
+          "type":"bool",
+          "default":"false"
+        },
+        {
+          "name":"custom_scene",
+          "type":"PackedScene",
+          "default":"null"
+        }
+      ]
+    },
+    {
       "returns":"String",
       "name":"get_instance_path",
       "qualifiers":"const"

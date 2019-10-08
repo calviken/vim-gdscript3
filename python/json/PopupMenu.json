@@ -11,6 +11,10 @@
     {
       "name":"hide_on_state_item_selection",
       "type":"bool"
+    },
+    {
+      "name":"submenu_popup_delay",
+      "type":"float"
     }
   ],
   "constants":[],
@@ -173,7 +177,54 @@
     },
     {
       "returns":"void",
-      "name":"add_separator"
+      "name":"add_radio_check_item",
+      "args":[
+        {
+          "name":"label",
+          "type":"String"
+        },
+        {
+          "name":"id",
+          "type":"int",
+          "default":"-1"
+        },
+        {
+          "name":"accel",
+          "type":"int",
+          "default":"0"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_radio_check_shortcut",
+      "args":[
+        {
+          "name":"shortcut",
+          "type":"ShortCut"
+        },
+        {
+          "name":"id",
+          "type":"int",
+          "default":"-1"
+        },
+        {
+          "name":"global",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_separator",
+      "args":[
+        {
+          "name":"label",
+          "type":"String",
+          "default":"\"\""
+        }
+      ]
     },
     {
       "returns":"void",
@@ -324,6 +375,11 @@
     },
     {
       "returns":"bool",
+      "name":"is_hide_on_window_lose_focus",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
       "name":"is_item_checkable",
       "qualifiers":"const",
       "args":[
@@ -357,7 +413,29 @@
     },
     {
       "returns":"bool",
+      "name":"is_item_radio_checkable",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"bool",
       "name":"is_item_separator",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"bool",
+      "name":"is_item_shortcut_disabled",
       "qualifiers":"const",
       "args":[
         {
@@ -378,6 +456,16 @@
     },
     {
       "returns":"void",
+      "name":"set_hide_on_window_lose_focus",
+      "args":[
+        {
+          "name":"enable",
+          "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_item_accelerator",
       "args":[
         {
@@ -393,6 +481,20 @@
     {
       "returns":"void",
       "name":"set_item_as_checkable",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        },
+        {
+          "name":"enable",
+          "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_item_as_radio_checkable",
       "args":[
         {
           "name":"idx",
@@ -518,6 +620,20 @@
           "name":"global",
           "type":"bool",
           "default":"false"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_item_shortcut_disabled",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        },
+        {
+          "name":"disabled",
+          "type":"bool"
         }
       ]
     },

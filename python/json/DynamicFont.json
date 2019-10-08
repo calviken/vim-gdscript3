@@ -21,6 +21,14 @@
       "type":"DynamicFontData"
     },
     {
+      "name":"outline_color",
+      "type":"Color"
+    },
+    {
+      "name":"outline_size",
+      "type":"int"
+    },
+    {
       "name":"size",
       "type":"int"
     },

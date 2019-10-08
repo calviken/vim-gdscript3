@@ -44,6 +44,74 @@
   "constants":[],
   "methods":[
     {
+      "returns":"void",
+      "name":"add_central_force",
+      "args":[
+        {
+          "name":"force",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_force",
+      "args":[
+        {
+          "name":"offset",
+          "type":"Vector2"
+        },
+        {
+          "name":"force",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_torque",
+      "args":[
+        {
+          "name":"torque",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_central_impulse",
+      "args":[
+        {
+          "name":"impulse",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_impulse",
+      "args":[
+        {
+          "name":"offset",
+          "type":"Vector2"
+        },
+        {
+          "name":"impulse",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_torque_impulse",
+      "args":[
+        {
+          "name":"impulse",
+          "type":"float"
+        }
+      ]
+    },
+    {
       "returns":"RID",
       "name":"get_contact_collider",
       "qualifiers":"const",

@@ -23,11 +23,16 @@
       "name":"CONNECT_ONESHOT",
       "value":"4",
       "type":"ConnectFlags"
+    },
+    {
+      "name":"CONNECT_REFERENCE_COUNTED",
+      "value":"8",
+      "type":"ConnectFlags"
     }
   ],
   "methods":[
     {
-      "returns":"void",
+      "returns":"Variant",
       "name":"_get",
       "qualifiers":"virtual",
       "args":[
@@ -387,6 +392,20 @@
         {
           "name":"enable",
           "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_deferred",
+      "args":[
+        {
+          "name":"property",
+          "type":"String"
+        },
+        {
+          "name":"value",
+          "type":"Variant"
         }
       ]
     },

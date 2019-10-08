@@ -23,7 +23,14 @@
     },
     {
       "returns":"Variant",
-      "name":"get_var"
+      "name":"get_var",
+      "args":[
+        {
+          "name":"allow_objects",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -42,6 +49,11 @@
         {
           "name":"var",
           "type":"Variant"
+        },
+        {
+          "name":"full_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     }

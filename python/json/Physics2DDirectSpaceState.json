@@ -59,6 +59,55 @@
           "name":"collision_layer",
           "type":"int",
           "default":"2147483647"
+        },
+        {
+          "name":"collide_with_bodies",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"collide_with_areas",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
+    },
+    {
+      "returns":"Array",
+      "name":"intersect_point_on_canvas",
+      "args":[
+        {
+          "name":"point",
+          "type":"Vector2"
+        },
+        {
+          "name":"canvas_instance_id",
+          "type":"int"
+        },
+        {
+          "name":"max_results",
+          "type":"int",
+          "default":"32"
+        },
+        {
+          "name":"exclude",
+          "type":"Array",
+          "default":"[  ]"
+        },
+        {
+          "name":"collision_layer",
+          "type":"int",
+          "default":"2147483647"
+        },
+        {
+          "name":"collide_with_bodies",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"collide_with_areas",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -83,6 +132,16 @@
           "name":"collision_layer",
           "type":"int",
           "default":"2147483647"
+        },
+        {
+          "name":"collide_with_bodies",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"collide_with_areas",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },

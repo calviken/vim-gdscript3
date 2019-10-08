@@ -47,6 +47,18 @@
     {
       "name":"texture_under",
       "type":"Texture"
+    },
+    {
+      "name":"tint_over",
+      "type":"Color"
+    },
+    {
+      "name":"tint_progress",
+      "type":"Color"
+    },
+    {
+      "name":"tint_under",
+      "type":"Color"
     }
   ],
   "constants":[
@@ -78,6 +90,21 @@
     {
       "name":"FILL_COUNTER_CLOCKWISE",
       "value":"5",
+      "type":"FillMode"
+    },
+    {
+      "name":"FILL_BILINEAR_LEFT_AND_RIGHT",
+      "value":"6",
+      "type":"FillMode"
+    },
+    {
+      "name":"FILL_BILINEAR_TOP_AND_BOTTOM",
+      "value":"7",
+      "type":"FillMode"
+    },
+    {
+      "name":"FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE",
+      "value":"8",
       "type":"FillMode"
     }
   ],

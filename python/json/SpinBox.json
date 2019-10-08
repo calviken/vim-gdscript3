@@ -1,6 +1,10 @@
 {
   "members":[
     {
+      "name":"align",
+      "type":"LineEdit.Align"
+    },
+    {
       "name":"editable",
       "type":"bool"
     },

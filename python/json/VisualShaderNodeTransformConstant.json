@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"constant",
+      "type":"Transform"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeTransformConstant",
+  "inherits":"VisualShaderNode"
+}

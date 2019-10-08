@@ -3,6 +3,21 @@
   "constants":[],
   "methods":[
     {
+      "returns":"bool",
+      "name":"exists",
+      "args":[
+        {
+          "name":"path",
+          "type":"String"
+        },
+        {
+          "name":"type_hint",
+          "type":"String",
+          "default":"\"\""
+        }
+      ]
+    },
+    {
       "returns":"PoolStringArray",
       "name":"get_dependencies",
       "args":[
@@ -33,6 +48,16 @@
       ]
     },
     {
+      "returns":"bool",
+      "name":"has_cached",
+      "args":[
+        {
+          "name":"path",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"Resource",
       "name":"load",
       "args":[
@@ -46,7 +71,7 @@
           "default":"\"\""
         },
         {
-          "name":"p_no_cache",
+          "name":"no_cache",
           "type":"bool",
           "default":"false"
         }

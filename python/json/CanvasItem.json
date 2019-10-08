@@ -60,6 +60,11 @@
       "type":"BlendMode"
     },
     {
+      "name":"BLEND_MODE_DISABLED",
+      "value":"5",
+      "type":"BlendMode"
+    },
+    {
       "name":"NOTIFICATION_TRANSFORM_CHANGED",
       "value":"29"
     },
@@ -195,6 +200,25 @@
     },
     {
       "returns":"void",
+      "name":"draw_mesh",
+      "args":[
+        {
+          "name":"mesh",
+          "type":"Mesh"
+        },
+        {
+          "name":"texture",
+          "type":"Texture"
+        },
+        {
+          "name":"normal_map",
+          "type":"Texture",
+          "default":"null"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"draw_multiline",
       "args":[
         {
@@ -238,6 +262,25 @@
           "name":"antialiased",
           "type":"bool",
           "default":"false"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"draw_multimesh",
+      "args":[
+        {
+          "name":"multimesh",
+          "type":"MultiMesh"
+        },
+        {
+          "name":"texture",
+          "type":"Texture"
+        },
+        {
+          "name":"normal_map",
+          "type":"Texture",
+          "default":"null"
         }
       ]
     },
@@ -539,6 +582,10 @@
           "default":"true"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"force_update_transform"
     },
     {
       "returns":"RID",

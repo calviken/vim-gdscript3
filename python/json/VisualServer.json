@@ -64,6 +64,26 @@
       "type":"CubeMapSide"
     },
     {
+      "name":"TEXTURE_TYPE_2D",
+      "value":"0",
+      "type":"TextureType"
+    },
+    {
+      "name":"TEXTURE_TYPE_CUBEMAP",
+      "value":"1",
+      "type":"TextureType"
+    },
+    {
+      "name":"TEXTURE_TYPE_2D_ARRAY",
+      "value":"2",
+      "type":"TextureType"
+    },
+    {
+      "name":"TEXTURE_TYPE_3D",
+      "value":"3",
+      "type":"TextureType"
+    },
+    {
       "name":"TEXTURE_FLAG_MIPMAPS",
       "value":"1",
       "type":"TextureFlags"
@@ -94,13 +114,8 @@
       "type":"TextureFlags"
     },
     {
-      "name":"TEXTURE_FLAG_CUBEMAP",
-      "value":"2048",
-      "type":"TextureFlags"
-    },
-    {
       "name":"TEXTURE_FLAG_USED_FOR_STREAMING",
-      "value":"4096",
+      "value":"2048",
       "type":"TextureFlags"
     },
     {
@@ -280,7 +295,7 @@
     },
     {
       "name":"ARRAY_COMPRESS_DEFAULT",
-      "value":"97792",
+      "value":"97280",
       "type":"ArrayFormat"
     },
     {
@@ -684,8 +699,13 @@
       "type":"InstanceFlags"
     },
     {
-      "name":"INSTANCE_FLAG_MAX",
+      "name":"INSTANCE_FLAG_DRAW_NEXT_FRAME_IF_VISIBLE",
       "value":"1",
+      "type":"InstanceFlags"
+    },
+    {
+      "name":"INSTANCE_FLAG_MAX",
+      "value":"2",
       "type":"InstanceFlags"
     },
     {
@@ -874,6 +894,21 @@
       "type":"MultimeshColorFormat"
     },
     {
+      "name":"MULTIMESH_CUSTOM_DATA_NONE",
+      "value":"0",
+      "type":"MultimeshCustomDataFormat"
+    },
+    {
+      "name":"MULTIMESH_CUSTOM_DATA_8BIT",
+      "value":"1",
+      "type":"MultimeshCustomDataFormat"
+    },
+    {
+      "name":"MULTIMESH_CUSTOM_DATA_FLOAT",
+      "value":"2",
+      "type":"MultimeshCustomDataFormat"
+    },
+    {
       "name":"REFLECTION_PROBE_UPDATE_ONCE",
       "value":"0",
       "type":"ReflectionProbeUpdateMode"
@@ -974,7 +1009,7 @@
       "type":"EnvironmentToneMapper"
     },
     {
-      "name":"ENV_TONE_MAPPER_REINHARDT",
+      "name":"ENV_TONE_MAPPER_REINHARD",
       "value":"1",
       "type":"EnvironmentToneMapper"
     },
@@ -1258,7 +1293,11 @@
           "type":"RID"
         },
         {
-          "name":"skeleton",
+          "name":"texture",
+          "type":"RID"
+        },
+        {
+          "name":"normal_map",
           "type":"RID"
         }
       ]
@@ -1276,7 +1315,11 @@
           "type":"RID"
         },
         {
-          "name":"skeleton",
+          "name":"texture",
+          "type":"RID"
+        },
+        {
+          "name":"normal_map",
           "type":"RID"
         }
       ]
@@ -1354,14 +1397,6 @@
         {
           "name":"normal_map",
           "type":"RID"
-        },
-        {
-          "name":"h_frames",
-          "type":"int"
-        },
-        {
-          "name":"v_frames",
-          "type":"int"
         }
       ]
     },
@@ -1598,6 +1633,16 @@
           "name":"uvs",
           "type":"PoolVector2Array",
           "default":"PoolVector2Array(  )"
+        },
+        {
+          "name":"bones",
+          "type":"PoolIntArray",
+          "default":"PoolIntArray(  )"
+        },
+        {
+          "name":"weights",
+          "type":"PoolRealArray",
+          "default":"PoolRealArray(  )"
         },
         {
           "name":"texture",
@@ -2335,6 +2380,11 @@
           "name":"swap_buffers",
           "type":"bool",
           "default":"true"
+        },
+        {
+          "name":"frame_step",
+          "type":"float",
+          "default":"0.0"
         }
       ]
     },
@@ -2555,6 +2605,10 @@
           "type":"float"
         },
         {
+          "name":"depth_end",
+          "type":"float"
+        },
+        {
           "name":"depth_curve",
           "type":"float"
         },
@@ -2635,6 +2689,10 @@
           "type":"float"
         },
         {
+          "name":"hdr_luminance_cap",
+          "type":"float"
+        },
+        {
           "name":"bicubic_upscale",
           "type":"bool"
         }
@@ -2665,6 +2723,20 @@
         {
           "name":"scale",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"environment_set_sky_orientation",
+      "args":[
+        {
+          "name":"env",
+          "type":"RID"
+        },
+        {
+          "name":"orientation",
+          "type":"Basis"
         }
       ]
     },
@@ -2702,6 +2774,10 @@
         },
         {
           "name":"light_affect",
+          "type":"float"
+        },
+        {
+          "name":"ao_channel_affect",
           "type":"float"
         },
         {
@@ -2810,6 +2886,11 @@
           "name":"swap_buffers",
           "type":"bool",
           "default":"true"
+        },
+        {
+          "name":"frame_step",
+          "type":"float",
+          "default":"0.0"
         }
       ]
     },
@@ -2859,7 +2940,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2892,7 +2973,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2903,7 +2984,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2914,7 +2995,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2925,7 +3006,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2936,7 +3017,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2947,7 +3028,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2958,7 +3039,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2969,7 +3050,7 @@
       "qualifiers":"const",
       "args":[
         {
-          "name":"arg0",
+          "name":"probe",
           "type":"RID"
         }
       ]
@@ -2979,11 +3060,11 @@
       "name":"gi_probe_set_bias",
       "args":[
         {
-          "name":"bias",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"bias",
           "type":"float"
         }
       ]
@@ -3021,11 +3102,11 @@
       "name":"gi_probe_set_compress",
       "args":[
         {
-          "name":"enable",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"enable",
           "type":"bool"
         }
       ]
@@ -3035,11 +3116,11 @@
       "name":"gi_probe_set_dynamic_data",
       "args":[
         {
-          "name":"data",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"data",
           "type":"PoolIntArray"
         }
       ]
@@ -3049,11 +3130,11 @@
       "name":"gi_probe_set_dynamic_range",
       "args":[
         {
-          "name":"range",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"range",
           "type":"int"
         }
       ]
@@ -3063,11 +3144,11 @@
       "name":"gi_probe_set_energy",
       "args":[
         {
-          "name":"energy",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"energy",
           "type":"float"
         }
       ]
@@ -3077,11 +3158,11 @@
       "name":"gi_probe_set_interior",
       "args":[
         {
-          "name":"enable",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"enable",
           "type":"bool"
         }
       ]
@@ -3091,11 +3172,11 @@
       "name":"gi_probe_set_normal_bias",
       "args":[
         {
-          "name":"bias",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"bias",
           "type":"float"
         }
       ]
@@ -3105,11 +3186,11 @@
       "name":"gi_probe_set_propagation",
       "args":[
         {
-          "name":"propagation",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"propagation",
           "type":"float"
         }
       ]
@@ -3119,11 +3200,11 @@
       "name":"gi_probe_set_to_cell_xform",
       "args":[
         {
-          "name":"xform",
+          "name":"probe",
           "type":"RID"
         },
         {
-          "name":"arg1",
+          "name":"xform",
           "type":"Transform"
         }
       ]
@@ -4024,6 +4105,21 @@
       ]
     },
     {
+      "returns":"Variant",
+      "name":"material_get_param_default",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"material",
+          "type":"RID"
+        },
+        {
+          "name":"parameter",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"RID",
       "name":"material_get_shader",
       "qualifiers":"const",
@@ -4132,7 +4228,7 @@
         {
           "name":"compress_format",
           "type":"int",
-          "default":"97792"
+          "default":"97280"
         }
       ]
     },
@@ -4356,6 +4452,48 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"mesh_surface_get_format_offset",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"format",
+          "type":"int"
+        },
+        {
+          "name":"vertex_len",
+          "type":"int"
+        },
+        {
+          "name":"index_len",
+          "type":"int"
+        },
+        {
+          "name":"array_index",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"mesh_surface_get_format_stride",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"format",
+          "type":"int"
+        },
+        {
+          "name":"vertex_len",
+          "type":"int"
+        },
+        {
+          "name":"index_len",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"PoolByteArray",
       "name":"mesh_surface_get_index_array",
       "qualifiers":"const",
@@ -4435,6 +4573,28 @@
     },
     {
       "returns":"void",
+      "name":"mesh_surface_update_region",
+      "args":[
+        {
+          "name":"mesh",
+          "type":"RID"
+        },
+        {
+          "name":"surface",
+          "type":"int"
+        },
+        {
+          "name":"offset",
+          "type":"int"
+        },
+        {
+          "name":"data",
+          "type":"PoolByteArray"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"multimesh_allocate",
       "args":[
         {
@@ -4452,6 +4612,11 @@
         {
           "name":"color_format",
           "type":"int"
+        },
+        {
+          "name":"custom_data_format",
+          "type":"int",
+          "default":"0"
         }
       ]
     },
@@ -4515,6 +4680,21 @@
       ]
     },
     {
+      "returns":"Color",
+      "name":"multimesh_instance_get_custom_data",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"multimesh",
+          "type":"RID"
+        },
+        {
+          "name":"index",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"Transform",
       "name":"multimesh_instance_get_transform",
       "qualifiers":"const",
@@ -4564,6 +4744,24 @@
     },
     {
       "returns":"void",
+      "name":"multimesh_instance_set_custom_data",
+      "args":[
+        {
+          "name":"multimesh",
+          "type":"RID"
+        },
+        {
+          "name":"index",
+          "type":"int"
+        },
+        {
+          "name":"custom_data",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"multimesh_instance_set_transform",
       "args":[
         {
@@ -4595,6 +4793,20 @@
         {
           "name":"transform",
           "type":"Transform2D"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"multimesh_set_as_bulk_array",
+      "args":[
+        {
+          "name":"multimesh",
+          "type":"RID"
+        },
+        {
+          "name":"array",
+          "type":"PoolRealArray"
         }
       ]
     },
@@ -5151,7 +5363,7 @@
           "type":"RID"
         },
         {
-          "name":"p_size",
+          "name":"size",
           "type":"int"
         },
         {
@@ -5418,7 +5630,15 @@
           "type":"int"
         },
         {
+          "name":"depth_3d",
+          "type":"int"
+        },
+        {
           "name":"format",
+          "type":"int"
+        },
+        {
+          "name":"type",
           "type":"int"
         },
         {
@@ -5464,6 +5684,17 @@
           "name":"cube_side",
           "type":"int",
           "default":"0"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"texture_get_depth",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"texture",
+          "type":"RID"
         }
       ]
     },
@@ -5524,6 +5755,17 @@
     },
     {
       "returns":"int",
+      "name":"texture_get_type",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"texture",
+          "type":"RID"
+        }
+      ]
+    },
+    {
+      "returns":"int",
       "name":"texture_get_width",
       "qualifiers":"const",
       "args":[
@@ -5546,7 +5788,54 @@
           "type":"Image"
         },
         {
-          "name":"cube_side",
+          "name":"layer",
+          "type":"int",
+          "default":"0"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"texture_set_data_partial",
+      "args":[
+        {
+          "name":"texture",
+          "type":"RID"
+        },
+        {
+          "name":"image",
+          "type":"Image"
+        },
+        {
+          "name":"src_x",
+          "type":"int"
+        },
+        {
+          "name":"src_y",
+          "type":"int"
+        },
+        {
+          "name":"src_w",
+          "type":"int"
+        },
+        {
+          "name":"src_h",
+          "type":"int"
+        },
+        {
+          "name":"dst_x",
+          "type":"int"
+        },
+        {
+          "name":"dst_y",
+          "type":"int"
+        },
+        {
+          "name":"dst_mip",
+          "type":"int"
+        },
+        {
+          "name":"layer",
           "type":"int",
           "default":"0"
         }
@@ -5604,6 +5893,10 @@
         },
         {
           "name":"height",
+          "type":"int"
+        },
+        {
+          "name":"depth",
           "type":"int"
         }
       ]
@@ -5735,7 +6028,7 @@
     },
     {
       "returns":"void",
-      "name":"viewport_set_canvas_layer",
+      "name":"viewport_set_canvas_stacking",
       "args":[
         {
           "name":"viewport",
@@ -5747,6 +6040,10 @@
         },
         {
           "name":"layer",
+          "type":"int"
+        },
+        {
+          "name":"sublayer",
           "type":"int"
         }
       ]

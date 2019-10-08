@@ -1,0 +1,27 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"void",
+      "name":"config",
+      "args":[
+        {
+          "name":"inherits",
+          "type":"String"
+        },
+        {
+          "name":"path",
+          "type":"String"
+        },
+        {
+          "name":"built_in_enabled",
+          "type":"bool",
+          "default":"true"
+        }
+      ]
+    }
+  ],
+  "name":"ScriptCreateDialog",
+  "inherits":"ConfirmationDialog"
+}

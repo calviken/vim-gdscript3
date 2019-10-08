@@ -1,6 +1,14 @@
 {
   "members":[
     {
+      "name":"allow_greater",
+      "type":"bool"
+    },
+    {
+      "name":"allow_lesser",
+      "type":"bool"
+    },
+    {
       "name":"exp_edit",
       "type":"bool"
     },

@@ -37,7 +37,15 @@
       "type":"bool"
     },
     {
+      "name":"handle_input_locally",
+      "type":"bool"
+    },
+    {
       "name":"hdr",
+      "type":"bool"
+    },
+    {
+      "name":"keep_3d_linear",
       "type":"bool"
     },
     {
@@ -304,6 +312,11 @@
       "qualifiers":"const"
     },
     {
+      "returns":"Control",
+      "name":"get_modal_stack_top",
+      "qualifiers":"const"
+    },
+    {
       "returns":"Vector2",
       "name":"get_mouse_position",
       "qualifiers":"const"
@@ -349,6 +362,11 @@
       "qualifiers":"const"
     },
     {
+      "returns":"bool",
+      "name":"gui_is_dragging",
+      "qualifiers":"const"
+    },
+    {
       "returns":"void",
       "name":"input",
       "args":[
@@ -357,6 +375,11 @@
           "type":"InputEvent"
         }
       ]
+    },
+    {
+      "returns":"bool",
+      "name":"is_input_handled",
+      "qualifiers":"const"
     },
     {
       "returns":"bool",
@@ -377,6 +400,10 @@
           "type":"Rect2"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"set_input_as_handled"
     },
     {
       "returns":"void",

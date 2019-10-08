@@ -59,9 +59,19 @@
           "default":"[  ]"
         },
         {
-          "name":"collision_layer",
+          "name":"collision_mask",
           "type":"int",
           "default":"2147483647"
+        },
+        {
+          "name":"collide_with_bodies",
+          "type":"bool",
+          "default":"true"
+        },
+        {
+          "name":"collide_with_areas",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },

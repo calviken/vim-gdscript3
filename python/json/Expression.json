@@ -1,0 +1,54 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"Variant",
+      "name":"execute",
+      "args":[
+        {
+          "name":"inputs",
+          "type":"Array",
+          "default":"[  ]"
+        },
+        {
+          "name":"base_instance",
+          "type":"Object",
+          "default":"null"
+        },
+        {
+          "name":"show_error",
+          "type":"bool",
+          "default":"true"
+        }
+      ]
+    },
+    {
+      "returns":"String",
+      "name":"get_error_text",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"has_execute_failed",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"int",
+      "name":"parse",
+      "args":[
+        {
+          "name":"expression",
+          "type":"String"
+        },
+        {
+          "name":"input_names",
+          "type":"PoolStringArray",
+          "default":"PoolStringArray(  )"
+        }
+      ]
+    }
+  ],
+  "name":"Expression",
+  "inherits":"Reference"
+}

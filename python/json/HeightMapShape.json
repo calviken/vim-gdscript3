@@ -1,0 +1,20 @@
+{
+  "members":[
+    {
+      "name":"map_data",
+      "type":"PoolRealArray"
+    },
+    {
+      "name":"map_depth",
+      "type":"int"
+    },
+    {
+      "name":"map_width",
+      "type":"int"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"HeightMapShape",
+  "inherits":"Shape"
+}

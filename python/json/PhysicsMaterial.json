@@ -1,0 +1,24 @@
+{
+  "members":[
+    {
+      "name":"absorbent",
+      "type":"bool"
+    },
+    {
+      "name":"bounce",
+      "type":"float"
+    },
+    {
+      "name":"friction",
+      "type":"float"
+    },
+    {
+      "name":"rough",
+      "type":"bool"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"PhysicsMaterial",
+  "inherits":"Resource"
+}

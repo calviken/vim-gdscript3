@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"constant",
+      "type":"float"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeScalarConstant",
+  "inherits":"VisualShaderNode"
+}

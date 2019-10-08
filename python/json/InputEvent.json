@@ -9,11 +9,10 @@
   "methods":[
     {
       "returns":"bool",
-      "name":"action_match",
-      "qualifiers":"const",
+      "name":"accumulate",
       "args":[
         {
-          "name":"event",
+          "name":"with_event",
           "type":"InputEvent"
         }
       ]
@@ -22,6 +21,17 @@
       "returns":"String",
       "name":"as_text",
       "qualifiers":"const"
+    },
+    {
+      "returns":"float",
+      "name":"get_action_strength",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"action",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"bool",

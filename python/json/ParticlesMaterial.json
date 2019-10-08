@@ -25,10 +25,6 @@
       "type":"float"
     },
     {
-      "name":"anim_loop",
-      "type":"bool"
-    },
-    {
       "name":"anim_offset",
       "type":"float"
     },
@@ -295,7 +291,7 @@
     },
     {
       "name":"FLAG_MAX",
-      "value":"4",
+      "value":"3",
       "type":"Flags"
     },
     {
