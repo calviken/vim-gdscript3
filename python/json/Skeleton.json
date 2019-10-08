@@ -1,5 +1,10 @@
 {
-  "members":[],
+  "members":[
+    {
+      "name":"bones_in_world_transform",
+      "type":"bool"
+    }
+  ],
   "constants":[
     {
       "name":"NOTIFICATION_UPDATE_SKELETON",
@@ -152,6 +157,41 @@
     },
     {
       "returns":"void",
+      "name":"physical_bones_add_collision_exception",
+      "args":[
+        {
+          "name":"exception",
+          "type":"RID"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"physical_bones_remove_collision_exception",
+      "args":[
+        {
+          "name":"exception",
+          "type":"RID"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"physical_bones_start_simulation",
+      "args":[
+        {
+          "name":"bones",
+          "type":"Array",
+          "default":"[  ]"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"physical_bones_stop_simulation"
+    },
+    {
+      "returns":"void",
       "name":"set_bone_custom_pose",
       "args":[
         {
@@ -189,6 +229,20 @@
         {
           "name":"pose",
           "type":"Transform"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_bone_ignore_animation",
+      "args":[
+        {
+          "name":"bone",
+          "type":"int"
+        },
+        {
+          "name":"ignore",
+          "type":"bool"
         }
       ]
     },

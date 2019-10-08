@@ -1,0 +1,23 @@
+{
+  "members":[
+    {
+      "name":"operator",
+      "type":"VisualShaderNodeTransformMult.Operator"
+    }
+  ],
+  "constants":[
+    {
+      "name":"OP_AxB",
+      "value":"0",
+      "type":"Operator"
+    },
+    {
+      "name":"OP_BxA",
+      "value":"1",
+      "type":"Operator"
+    }
+  ],
+  "methods":[],
+  "name":"VisualShaderNodeTransformMult",
+  "inherits":"VisualShaderNode"
+}

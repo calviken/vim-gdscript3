@@ -9,6 +9,10 @@
   "methods":[
     {
       "returns":"void",
+      "name":"clear"
+    },
+    {
+      "returns":"void",
       "name":"clear_color",
       "args":[
         {
@@ -80,6 +84,16 @@
     {
       "returns":"void",
       "name":"copy_default_theme"
+    },
+    {
+      "returns":"void",
+      "name":"copy_theme",
+      "args":[
+        {
+          "name":"other",
+          "type":"Theme"
+        }
+      ]
     },
     {
       "returns":"Color",

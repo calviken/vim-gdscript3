@@ -61,7 +61,7 @@
     },
     {
       "name":"FLAG_MAX",
-      "value":"1",
+      "value":"2",
       "type":"Flags"
     }
   ],

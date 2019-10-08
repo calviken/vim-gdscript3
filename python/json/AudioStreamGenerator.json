@@ -1,0 +1,16 @@
+{
+  "members":[
+    {
+      "name":"buffer_length",
+      "type":"float"
+    },
+    {
+      "name":"mix_rate",
+      "type":"float"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"AudioStreamGenerator",
+  "inherits":"AudioStream"
+}

@@ -85,6 +85,11 @@
       "name":"LINE_TEXTURE_TILE",
       "value":"1",
       "type":"LineTextureMode"
+    },
+    {
+      "name":"LINE_TEXTURE_STRETCH",
+      "value":"2",
+      "type":"LineTextureMode"
     }
   ],
   "methods":[
@@ -97,6 +102,10 @@
           "type":"Vector2"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"clear_points"
     },
     {
       "returns":"int",

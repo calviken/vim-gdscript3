@@ -13,6 +13,27 @@
       "qualifiers":"const"
     },
     {
+      "returns":"RID",
+      "name":"get_base",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"RID",
+      "name":"get_instance",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"get_layer_mask_bit",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"layer",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"AABB",
       "name":"get_transformed_aabb",
       "qualifiers":"const"
@@ -24,6 +45,20 @@
         {
           "name":"base",
           "type":"RID"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_layer_mask_bit",
+      "args":[
+        {
+          "name":"layer",
+          "type":"int"
+        },
+        {
+          "name":"enabled",
+          "type":"bool"
         }
       ]
     }

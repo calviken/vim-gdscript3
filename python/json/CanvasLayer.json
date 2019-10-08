@@ -32,8 +32,8 @@
   "constants":[],
   "methods":[
     {
-      "returns":"World2D",
-      "name":"get_world_2d",
+      "returns":"RID",
+      "name":"get_canvas",
       "qualifiers":"const"
     }
   ],

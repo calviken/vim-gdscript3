@@ -5,6 +5,10 @@
       "type":"int"
     },
     {
+      "name":"drag_to_rearrange_enabled",
+      "type":"bool"
+    },
+    {
       "name":"tab_align",
       "type":"TabContainer.TabAlign"
     },
@@ -96,6 +100,11 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"get_tabs_rearrange_group",
+      "qualifiers":"const"
+    },
+    {
       "returns":"void",
       "name":"set_popup",
       "args":[
@@ -146,8 +155,18 @@
           "type":"String"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"set_tabs_rearrange_group",
+      "args":[
+        {
+          "name":"group_id",
+          "type":"int"
+        }
+      ]
     }
   ],
   "name":"TabContainer",
-  "inherits":"Control"
+  "inherits":"Container"
 }

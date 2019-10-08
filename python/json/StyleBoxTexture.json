@@ -50,7 +50,7 @@
     },
     {
       "name":"normal_map",
-      "type":"Resource"
+      "type":"Texture"
     },
     {
       "name":"region_rect",
@@ -58,7 +58,7 @@
     },
     {
       "name":"texture",
-      "type":"Resource"
+      "type":"Texture"
     }
   ],
   "constants":[

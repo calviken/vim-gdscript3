@@ -9,6 +9,10 @@
       "type":"int"
     },
     {
+      "name":"physics_jitter_fix",
+      "type":"float"
+    },
+    {
       "name":"target_fps",
       "type":"int"
     },
@@ -20,12 +24,37 @@
   "constants":[],
   "methods":[
     {
+      "returns":"Dictionary",
+      "name":"get_author_info",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Array",
+      "name":"get_copyright_info",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Dictionary",
+      "name":"get_donor_info",
+      "qualifiers":"const"
+    },
+    {
       "returns":"int",
       "name":"get_frames_drawn"
     },
     {
       "returns":"float",
       "name":"get_frames_per_second",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Dictionary",
+      "name":"get_license_info",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"String",
+      "name":"get_license_text",
       "qualifiers":"const"
     },
     {

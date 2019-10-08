@@ -158,7 +158,7 @@
     },
     {
       "name":"ARRAY_COMPRESS_DEFAULT",
-      "value":"97792",
+      "value":"97280",
       "type":"ArrayFormat"
     },
     {
@@ -243,6 +243,44 @@
       "returns":"PoolVector3Array",
       "name":"get_faces",
       "qualifiers":"const"
+    },
+    {
+      "returns":"int",
+      "name":"get_surface_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Array",
+      "name":"surface_get_arrays",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"surf_idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Array",
+      "name":"surface_get_blend_shape_arrays",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"surf_idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Material",
+      "name":"surface_get_material",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"surf_idx",
+          "type":"int"
+        }
+      ]
     }
   ],
   "name":"Mesh",

@@ -65,6 +65,14 @@
       "type":"bool"
     },
     {
+      "name":"depth_flip_binormal",
+      "type":"bool"
+    },
+    {
+      "name":"depth_flip_tangent",
+      "type":"bool"
+    },
+    {
       "name":"depth_max_layers",
       "type":"int"
     },
@@ -105,16 +113,16 @@
       "type":"SpatialMaterial.DetailUV"
     },
     {
-      "name":"distance_fade_enable",
-      "type":"bool"
-    },
-    {
       "name":"distance_fade_max_distance",
       "type":"float"
     },
     {
       "name":"distance_fade_min_distance",
       "type":"float"
+    },
+    {
+      "name":"distance_fade_mode",
+      "type":"SpatialMaterial.DistanceFadeMode"
     },
     {
       "name":"emission",
@@ -142,6 +150,18 @@
     },
     {
       "name":"flags_albedo_tex_force_srgb",
+      "type":"bool"
+    },
+    {
+      "name":"flags_disable_ambient_light",
+      "type":"bool"
+    },
+    {
+      "name":"flags_do_not_receive_shadows",
+      "type":"bool"
+    },
+    {
+      "name":"flags_ensure_correct_normals",
       "type":"bool"
     },
     {
@@ -205,6 +225,10 @@
       "type":"float"
     },
     {
+      "name":"params_billboard_keep_scale",
+      "type":"bool"
+    },
+    {
       "name":"params_billboard_mode",
       "type":"SpatialMaterial.BillboardMode"
     },
@@ -254,7 +278,7 @@
     },
     {
       "name":"particles_anim_loop",
-      "type":"int"
+      "type":"bool"
     },
     {
       "name":"particles_anim_v_frames",
@@ -629,43 +653,63 @@
       "type":"Flags"
     },
     {
-      "name":"FLAG_UV1_USE_TRIPLANAR",
+      "name":"FLAG_BILLBOARD_KEEP_SCALE",
       "value":"7",
       "type":"Flags"
     },
     {
-      "name":"FLAG_UV2_USE_TRIPLANAR",
+      "name":"FLAG_UV1_USE_TRIPLANAR",
       "value":"8",
       "type":"Flags"
     },
     {
-      "name":"FLAG_AO_ON_UV2",
-      "value":"10",
-      "type":"Flags"
-    },
-    {
-      "name":"FLAG_EMISSION_ON_UV2",
-      "value":"11",
-      "type":"Flags"
-    },
-    {
-      "name":"FLAG_USE_ALPHA_SCISSOR",
-      "value":"12",
-      "type":"Flags"
-    },
-    {
-      "name":"FLAG_TRIPLANAR_USE_WORLD",
+      "name":"FLAG_UV2_USE_TRIPLANAR",
       "value":"9",
       "type":"Flags"
     },
     {
-      "name":"FLAG_ALBEDO_TEXTURE_FORCE_SRGB",
+      "name":"FLAG_AO_ON_UV2",
+      "value":"11",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_EMISSION_ON_UV2",
+      "value":"12",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_USE_ALPHA_SCISSOR",
       "value":"13",
       "type":"Flags"
     },
     {
-      "name":"FLAG_MAX",
+      "name":"FLAG_TRIPLANAR_USE_WORLD",
+      "value":"10",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_ALBEDO_TEXTURE_FORCE_SRGB",
       "value":"14",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_DONT_RECEIVE_SHADOWS",
+      "value":"15",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_DISABLE_AMBIENT_LIGHT",
+      "value":"17",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_ENSURE_CORRECT_NORMALS",
+      "value":"16",
+      "type":"Flags"
+    },
+    {
+      "name":"FLAG_MAX",
+      "value":"18",
       "type":"Flags"
     },
     {
@@ -772,6 +816,26 @@
       "name":"EMISSION_OP_MULTIPLY",
       "value":"1",
       "type":"EmissionOperator"
+    },
+    {
+      "name":"DISTANCE_FADE_DISABLED",
+      "value":"0",
+      "type":"DistanceFadeMode"
+    },
+    {
+      "name":"DISTANCE_FADE_PIXEL_ALPHA",
+      "value":"1",
+      "type":"DistanceFadeMode"
+    },
+    {
+      "name":"DISTANCE_FADE_PIXEL_DITHER",
+      "value":"2",
+      "type":"DistanceFadeMode"
+    },
+    {
+      "name":"DISTANCE_FADE_OBJECT_DITHER",
+      "value":"3",
+      "type":"DistanceFadeMode"
     }
   ],
   "methods":[],

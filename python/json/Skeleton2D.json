@@ -1,0 +1,28 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"Bone2D",
+      "name":"get_bone",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"get_bone_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"RID",
+      "name":"get_skeleton",
+      "qualifiers":"const"
+    }
+  ],
+  "name":"Skeleton2D",
+  "inherits":"Node2D"
+}

@@ -45,7 +45,14 @@
     },
     {
       "returns":"void",
-      "name":"start"
+      "name":"start",
+      "args":[
+        {
+          "name":"time_sec",
+          "type":"float",
+          "default":"-1"
+        }
+      ]
     },
     {
       "returns":"void",

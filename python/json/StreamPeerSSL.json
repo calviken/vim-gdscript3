@@ -1,5 +1,10 @@
 {
-  "members":[],
+  "members":[
+    {
+      "name":"blocking_handshake",
+      "type":"bool"
+    }
+  ],
   "constants":[
     {
       "name":"STATUS_DISCONNECTED",
@@ -7,18 +12,23 @@
       "type":"Status"
     },
     {
-      "name":"STATUS_CONNECTED",
+      "name":"STATUS_HANDSHAKING",
       "value":"1",
       "type":"Status"
     },
     {
-      "name":"STATUS_ERROR_NO_CERTIFICATE",
+      "name":"STATUS_CONNECTED",
       "value":"2",
       "type":"Status"
     },
     {
-      "name":"STATUS_ERROR_HOSTNAME_MISMATCH",
+      "name":"STATUS_ERROR",
       "value":"3",
+      "type":"Status"
+    },
+    {
+      "name":"STATUS_ERROR_HOSTNAME_MISMATCH",
+      "value":"4",
       "type":"Status"
     }
   ],
@@ -28,7 +38,7 @@
       "name":"accept_stream",
       "args":[
         {
-          "name":"stream",
+          "name":"base",
           "type":"StreamPeer"
         }
       ]
@@ -61,6 +71,10 @@
       "returns":"int",
       "name":"get_status",
       "qualifiers":"const"
+    },
+    {
+      "returns":"void",
+      "name":"poll"
     }
   ],
   "name":"StreamPeerSSL",

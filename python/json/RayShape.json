@@ -3,6 +3,10 @@
     {
       "name":"length",
       "type":"float"
+    },
+    {
+      "name":"slips_on_slope",
+      "type":"bool"
     }
   ],
   "constants":[],

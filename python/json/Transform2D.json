@@ -13,29 +13,42 @@
       "type":"Vector2"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"IDENTITY",
+      "value":"Transform2D( 1, 0, 0, 1, 0, 0 )"
+    },
+    {
+      "name":"FLIP_X",
+      "value":"Transform2D( -1, 0, 0, 1, 0, 0 )"
+    },
+    {
+      "name":"FLIP_Y",
+      "value":"Transform2D( 1, 0, 0, -1, 0, 0 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Transform2D",
       "name":"affine_inverse"
     },
     {
-      "returns":"Transform2D",
+      "returns":"Vector2",
       "name":"basis_xform",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Vector2"
         }
       ]
     },
     {
-      "returns":"Transform2D",
+      "returns":"Vector2",
       "name":"basis_xform_inv",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Vector2"
         }
       ]
     },
@@ -104,22 +117,22 @@
       ]
     },
     {
-      "returns":"Transform2D",
+      "returns":"Variant",
       "name":"xform",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
     {
-      "returns":"Transform2D",
+      "returns":"Variant",
       "name":"xform_inv",
       "args":[
         {
           "name":"v",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     }

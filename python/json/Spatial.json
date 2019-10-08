@@ -53,6 +53,10 @@
   ],
   "methods":[
     {
+      "returns":"void",
+      "name":"force_update_transform"
+    },
+    {
       "returns":"Spatial",
       "name":"get_parent_spatial",
       "qualifiers":"const"
@@ -103,6 +107,11 @@
     {
       "returns":"bool",
       "name":"is_local_transform_notification_enabled",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"is_scale_disabled",
       "qualifiers":"const"
     },
     {
@@ -230,6 +239,16 @@
       "args":[
         {
           "name":"enable",
+          "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_disable_scale",
+      "args":[
+        {
+          "name":"disable",
           "type":"bool"
         }
       ]

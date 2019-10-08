@@ -88,6 +88,11 @@
   ],
   "methods":[
     {
+      "returns":"TriangleMesh",
+      "name":"generate_triangle_mesh",
+      "qualifiers":"const"
+    },
+    {
       "returns":"Rect2",
       "name":"get_item_rect",
       "qualifiers":"const"

@@ -35,6 +35,11 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"get_surface_material_count",
+      "qualifiers":"const"
+    },
+    {
       "returns":"void",
       "name":"set_surface_material",
       "args":[

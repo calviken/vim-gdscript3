@@ -5,7 +5,11 @@
       "type":"Color"
     },
     {
-      "name":"grow",
+      "name":"grow_begin",
+      "type":"float"
+    },
+    {
+      "name":"grow_end",
       "type":"float"
     },
     {

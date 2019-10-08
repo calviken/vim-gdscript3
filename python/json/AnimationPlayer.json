@@ -51,6 +51,11 @@
       "name":"ANIMATION_PROCESS_IDLE",
       "value":"1",
       "type":"AnimationProcessMode"
+    },
+    {
+      "name":"ANIMATION_PROCESS_MANUAL",
+      "value":"2",
+      "type":"AnimationProcessMode"
     }
   ],
   "methods":[
@@ -152,6 +157,15 @@
           "type":"String"
         }
       ]
+    },
+    {
+      "returns":"float",
+      "name":"get_playing_speed",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"PoolStringArray",
+      "name":"get_queue"
     },
     {
       "returns":"bool",

@@ -1,0 +1,7 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[],
+  "name":"ResourceFormatLoaderStreamTexture",
+  "inherits":"ResourceFormatLoader"
+}

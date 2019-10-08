@@ -69,6 +69,10 @@
       "type":"RigidBody2D.Mode"
     },
     {
+      "name":"physics_material_override",
+      "type":"PhysicsMaterial"
+    },
+    {
       "name":"sleeping",
       "type":"bool"
     },
@@ -128,6 +132,16 @@
     },
     {
       "returns":"void",
+      "name":"add_central_force",
+      "args":[
+        {
+          "name":"force",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"add_force",
       "args":[
         {
@@ -136,6 +150,26 @@
         },
         {
           "name":"force",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"add_torque",
+      "args":[
+        {
+          "name":"torque",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_central_impulse",
+      "args":[
+        {
+          "name":"impulse",
           "type":"Vector2"
         }
       ]
@@ -151,6 +185,16 @@
         {
           "name":"impulse",
           "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"apply_torque_impulse",
+      "args":[
+        {
+          "name":"torque",
+          "type":"float"
         }
       ]
     },
@@ -176,6 +220,11 @@
         {
           "name":"motion",
           "type":"Vector2"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool",
+          "default":"true"
         },
         {
           "name":"margin",

@@ -50,7 +50,24 @@
     }
   ],
   "constants":[],
-  "methods":[],
+  "methods":[
+    {
+      "returns":"Rect2",
+      "name":"get_rect",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"is_pixel_opaque",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"pos",
+          "type":"Vector2"
+        }
+      ]
+    }
+  ],
   "name":"Sprite",
   "inherits":"Node2D"
 }

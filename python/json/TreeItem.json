@@ -30,18 +30,13 @@
       "type":"TreeCellMode"
     },
     {
-      "name":"CELL_MODE_RANGE_EXPRESSION",
+      "name":"CELL_MODE_ICON",
       "value":"3",
       "type":"TreeCellMode"
     },
     {
-      "name":"CELL_MODE_ICON",
-      "value":"4",
-      "type":"TreeCellMode"
-    },
-    {
       "name":"CELL_MODE_CUSTOM",
-      "value":"5",
+      "value":"4",
       "type":"TreeCellMode"
     },
     {

@@ -144,8 +144,30 @@
       ]
     },
     {
+      "returns":"Color",
+      "name":"get_item_custom_fg_color",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"Texture",
       "name":"get_item_icon",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Color",
+      "name":"get_item_icon_modulate",
       "qualifiers":"const",
       "args":[
         {
@@ -208,7 +230,22 @@
     },
     {
       "returns":"bool",
+      "name":"is_anything_selected"
+    },
+    {
+      "returns":"bool",
       "name":"is_item_disabled",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"bool",
+      "name":"is_item_icon_transposed",
       "qualifiers":"const",
       "args":[
         {
@@ -246,6 +283,20 @@
       "args":[
         {
           "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"move_item",
+      "args":[
+        {
+          "name":"from_idx",
+          "type":"int"
+        },
+        {
+          "name":"to_idx",
           "type":"int"
         }
       ]
@@ -291,6 +342,20 @@
     },
     {
       "returns":"void",
+      "name":"set_item_custom_fg_color",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        },
+        {
+          "name":"custom_fg_color",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_item_disabled",
       "args":[
         {
@@ -319,6 +384,20 @@
     },
     {
       "returns":"void",
+      "name":"set_item_icon_modulate",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        },
+        {
+          "name":"modulate",
+          "type":"Color"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_item_icon_region",
       "args":[
         {
@@ -328,6 +407,20 @@
         {
           "name":"rect",
           "type":"Rect2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_item_icon_transposed",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        },
+        {
+          "name":"rect",
+          "type":"bool"
         }
       ]
     },
@@ -414,6 +507,10 @@
           "type":"int"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"unselect_all"
     }
   ],
   "name":"ItemList",

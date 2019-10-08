@@ -37,6 +37,11 @@
       "type":"SpaceParameter"
     },
     {
+      "name":"SPACE_PARAM_TEST_MOTION_MIN_CONTACT_DEPTH",
+      "value":"7",
+      "type":"SpaceParameter"
+    },
+    {
       "name":"SHAPE_LINE",
       "value":"0",
       "type":"ShapeType"
@@ -339,6 +344,20 @@
     },
     {
       "returns":"void",
+      "name":"area_attach_canvas_instance_id",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        },
+        {
+          "name":"id",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"area_attach_object_instance_id",
       "args":[
         {
@@ -364,6 +383,17 @@
     {
       "returns":"RID",
       "name":"area_create"
+    },
+    {
+      "returns":"int",
+      "name":"area_get_canvas_instance_id",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -481,6 +511,24 @@
     },
     {
       "returns":"void",
+      "name":"area_set_area_monitor_callback",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        },
+        {
+          "name":"receiver",
+          "type":"Object"
+        },
+        {
+          "name":"method",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"area_set_collision_layer",
       "args":[
         {
@@ -522,6 +570,20 @@
         {
           "name":"method",
           "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"area_set_monitorable",
+      "args":[
+        {
+          "name":"area",
+          "type":"RID"
+        },
+        {
+          "name":"monitorable",
+          "type":"bool"
         }
       ]
     },
@@ -641,6 +703,20 @@
     },
     {
       "returns":"void",
+      "name":"body_add_central_force",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"force",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"body_add_collision_exception",
       "args":[
         {
@@ -692,6 +768,34 @@
     },
     {
       "returns":"void",
+      "name":"body_add_torque",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"torque",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_apply_central_impulse",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"impulse",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"body_apply_impulse",
       "args":[
         {
@@ -705,6 +809,34 @@
         {
           "name":"impulse",
           "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_apply_torque_impulse",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"impulse",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"body_attach_canvas_instance_id",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        },
+        {
+          "name":"id",
+          "type":"int"
         }
       ]
     },
@@ -735,6 +867,17 @@
     {
       "returns":"RID",
       "name":"body_create"
+    },
+    {
+      "returns":"int",
+      "name":"body_get_canvas_instance_id",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"body",
+          "type":"RID"
+        }
+      ]
     },
     {
       "returns":"int",
@@ -1120,6 +1263,10 @@
         {
           "name":"enable",
           "type":"bool"
+        },
+        {
+          "name":"margin",
+          "type":"float"
         }
       ]
     },
@@ -1224,6 +1371,10 @@
         {
           "name":"motion",
           "type":"Vector2"
+        },
+        {
+          "name":"infinite_inertia",
+          "type":"bool"
         },
         {
           "name":"margin",

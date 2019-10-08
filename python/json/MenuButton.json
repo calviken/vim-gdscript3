@@ -1,5 +1,10 @@
 {
-  "members":[],
+  "members":[
+    {
+      "name":"switch_on_hover",
+      "type":"bool"
+    }
+  ],
   "constants":[],
   "methods":[
     {

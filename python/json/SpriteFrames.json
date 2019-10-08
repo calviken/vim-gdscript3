@@ -62,6 +62,11 @@
       ]
     },
     {
+      "returns":"PoolStringArray",
+      "name":"get_animation_names",
+      "qualifiers":"const"
+    },
+    {
       "returns":"float",
       "name":"get_animation_speed",
       "qualifiers":"const",

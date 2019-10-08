@@ -116,7 +116,7 @@
       "args":[
         {
           "name":"values",
-          "type":"var"
+          "type":"Variant"
         },
         {
           "name":"placeholder",
@@ -197,6 +197,17 @@
     },
     {
       "returns":"bool",
+      "name":"is_valid_hex_number",
+      "args":[
+        {
+          "name":"with_prefix",
+          "type":"bool",
+          "default":"False"
+        }
+      ]
+    },
+    {
+      "returns":"bool",
       "name":"is_valid_html_color"
     },
     {
@@ -228,6 +239,16 @@
     {
       "returns":"int",
       "name":"length"
+    },
+    {
+      "returns":"String",
+      "name":"lstrip",
+      "args":[
+        {
+          "name":"chars",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"bool",
@@ -384,6 +405,36 @@
       ]
     },
     {
+      "returns":"PoolStringArray",
+      "name":"rsplit",
+      "args":[
+        {
+          "name":"divisor",
+          "type":"String"
+        },
+        {
+          "name":"allow_empty",
+          "type":"bool",
+          "default":"True"
+        },
+        {
+          "name":"maxsplit",
+          "type":"int",
+          "default":"0"
+        }
+      ]
+    },
+    {
+      "returns":"String",
+      "name":"rstrip",
+      "args":[
+        {
+          "name":"chars",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"PoolByteArray",
       "name":"sha256_buffer"
     },
@@ -489,6 +540,26 @@
     {
       "returns":"PoolByteArray",
       "name":"to_utf8"
+    },
+    {
+      "returns":"String",
+      "name":"trim_prefix",
+      "args":[
+        {
+          "name":"prefix",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"String",
+      "name":"trim_suffix",
+      "args":[
+        {
+          "name":"suffix",
+          "type":"String"
+        }
+      ]
     },
     {
       "returns":"String",

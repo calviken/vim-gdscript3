@@ -1,0 +1,33 @@
+{
+  "members":[
+    {
+      "name":"operator",
+      "type":"VisualShaderNodeTransformVecMult.Operator"
+    }
+  ],
+  "constants":[
+    {
+      "name":"OP_AxB",
+      "value":"0",
+      "type":"Operator"
+    },
+    {
+      "name":"OP_BxA",
+      "value":"1",
+      "type":"Operator"
+    },
+    {
+      "name":"OP_3x3_AxB",
+      "value":"2",
+      "type":"Operator"
+    },
+    {
+      "name":"OP_3x3_BxA",
+      "value":"3",
+      "type":"Operator"
+    }
+  ],
+  "methods":[],
+  "name":"VisualShaderNodeTransformVecMult",
+  "inherits":"VisualShaderNode"
+}

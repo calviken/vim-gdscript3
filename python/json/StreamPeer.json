@@ -62,7 +62,8 @@
       "args":[
         {
           "name":"bytes",
-          "type":"int"
+          "type":"int",
+          "default":"-1"
         }
       ]
     },
@@ -88,13 +89,21 @@
       "args":[
         {
           "name":"bytes",
-          "type":"int"
+          "type":"int",
+          "default":"-1"
         }
       ]
     },
     {
       "returns":"Variant",
-      "name":"get_var"
+      "name":"get_var",
+      "args":[
+        {
+          "name":"allow_objects",
+          "type":"bool",
+          "default":"false"
+        }
+      ]
     },
     {
       "returns":"void",
@@ -178,6 +187,16 @@
     },
     {
       "returns":"void",
+      "name":"put_string",
+      "args":[
+        {
+          "name":"value",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"put_u16",
       "args":[
         {
@@ -233,6 +252,11 @@
         {
           "name":"value",
           "type":"Variant"
+        },
+        {
+          "name":"full_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     }

@@ -31,6 +31,10 @@
     {
       "name":"playing",
       "type":"bool"
+    },
+    {
+      "name":"speed_scale",
+      "type":"float"
     }
   ],
   "constants":[],
@@ -48,6 +52,11 @@
           "name":"anim",
           "type":"String",
           "default":"\"\""
+        },
+        {
+          "name":"backwards",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },

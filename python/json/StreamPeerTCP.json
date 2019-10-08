@@ -53,8 +53,7 @@
     },
     {
       "returns":"int",
-      "name":"get_status",
-      "qualifiers":"const"
+      "name":"get_status"
     },
     {
       "returns":"bool",

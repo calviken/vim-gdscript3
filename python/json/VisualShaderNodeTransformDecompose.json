@@ -1,0 +1,7 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeTransformDecompose",
+  "inherits":"VisualShaderNode"
+}

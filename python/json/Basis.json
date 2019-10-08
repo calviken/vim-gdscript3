@@ -28,12 +28,31 @@
       "name":"get_orthogonal_index"
     },
     {
+      "returns":"Quat",
+      "name":"get_rotation_quat"
+    },
+    {
       "returns":"Vector3",
       "name":"get_scale"
     },
     {
       "returns":"Basis",
       "name":"inverse"
+    },
+    {
+      "returns":"bool",
+      "name":"is_equal_approx",
+      "args":[
+        {
+          "name":"b",
+          "type":"Basis"
+        },
+        {
+          "name":"epsilon",
+          "type":"float",
+          "default":"0.00001"
+        }
+      ]
     },
     {
       "returns":"Basis",
@@ -60,6 +79,20 @@
         {
           "name":"scale",
           "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"Basis",
+      "name":"slerp",
+      "args":[
+        {
+          "name":"b",
+          "type":"Basis"
+        },
+        {
+          "name":"t",
+          "type":"float"
         }
       ]
     },

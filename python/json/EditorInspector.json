@@ -1,0 +1,12 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[
+    {
+      "returns":"void",
+      "name":"refresh"
+    }
+  ],
+  "name":"EditorInspector",
+  "inherits":"ScrollContainer"
+}

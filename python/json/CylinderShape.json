@@ -1,0 +1,16 @@
+{
+  "members":[
+    {
+      "name":"height",
+      "type":"float"
+    },
+    {
+      "name":"radius",
+      "type":"float"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"CylinderShape",
+  "inherits":"Shape"
+}

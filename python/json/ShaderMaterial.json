@@ -19,6 +19,26 @@
       ]
     },
     {
+      "returns":"bool",
+      "name":"property_can_revert",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"Variant",
+      "name":"property_get_revert",
+      "args":[
+        {
+          "name":"name",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"set_shader_param",
       "args":[

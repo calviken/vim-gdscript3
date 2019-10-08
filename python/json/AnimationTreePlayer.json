@@ -127,6 +127,17 @@
       ]
     },
     {
+      "returns":"float",
+      "name":"animation_node_get_position",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"animation_node_set_animation",
       "args":[

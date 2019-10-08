@@ -25,6 +25,42 @@
     {
       "name":"AXIS_Z",
       "value":"2"
+    },
+    {
+      "name":"ZERO",
+      "value":"Vector3( 0, 0, 0 )"
+    },
+    {
+      "name":"ONE",
+      "value":"Vector3( 1, 1, 1 )"
+    },
+    {
+      "name":"INF",
+      "value":"Vector3( inf, inf, inf )"
+    },
+    {
+      "name":"LEFT",
+      "value":"Vector3( -1, 0, 0 )"
+    },
+    {
+      "name":"RIGHT",
+      "value":"Vector3( 1, 0, 0 )"
+    },
+    {
+      "name":"UP",
+      "value":"Vector3( 0, 1, 0 )"
+    },
+    {
+      "name":"DOWN",
+      "value":"Vector3( 0, -1, 0 )"
+    },
+    {
+      "name":"FORWARD",
+      "value":"Vector3( 0, 0, -1 )"
+    },
+    {
+      "name":"BACK",
+      "value":"Vector3( 0, 0, 1 )"
     }
   ],
   "methods":[
@@ -85,6 +121,16 @@
         {
           "name":"t",
           "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
+      "name":"direction_to",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector3"
         }
       ]
     },
@@ -176,6 +222,16 @@
     },
     {
       "returns":"Vector3",
+      "name":"project",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector3"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
       "name":"reflect",
       "args":[
         {
@@ -200,6 +256,24 @@
     },
     {
       "returns":"Vector3",
+      "name":"round"
+    },
+    {
+      "returns":"Vector3",
+      "name":"slerp",
+      "args":[
+        {
+          "name":"b",
+          "type":"Vector3"
+        },
+        {
+          "name":"t",
+          "type":"float"
+        }
+      ]
+    },
+    {
+      "returns":"Vector3",
       "name":"slide",
       "args":[
         {
@@ -214,7 +288,7 @@
       "args":[
         {
           "name":"by",
-          "type":"float"
+          "type":"Vector3"
         }
       ]
     },

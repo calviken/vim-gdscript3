@@ -47,6 +47,28 @@
       "qualifiers":"const"
     },
     {
+      "returns":"float",
+      "name":"get_closest_offset",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"to_point",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"Vector2",
+      "name":"get_closest_point",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"to_point",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
       "returns":"int",
       "name":"get_point_count",
       "qualifiers":"const"

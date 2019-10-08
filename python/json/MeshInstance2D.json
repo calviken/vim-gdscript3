@@ -1,0 +1,20 @@
+{
+  "members":[
+    {
+      "name":"mesh",
+      "type":"Mesh"
+    },
+    {
+      "name":"normal_map",
+      "type":"Texture"
+    },
+    {
+      "name":"texture",
+      "type":"Texture"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"MeshInstance2D",
+  "inherits":"Node2D"
+}

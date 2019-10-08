@@ -1,6 +1,14 @@
 {
   "members":[
     {
+      "name":"collide_with_areas",
+      "type":"bool"
+    },
+    {
+      "name":"collide_with_bodies",
+      "type":"bool"
+    },
+    {
       "name":"collision_layer",
       "type":"int"
     },

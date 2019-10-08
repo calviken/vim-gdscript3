@@ -1,6 +1,14 @@
 {
   "members":[
     {
+      "name":"custom_aabb",
+      "type":"AABB"
+    },
+    {
+      "name":"flip_faces",
+      "type":"bool"
+    },
+    {
       "name":"material",
       "type":"Material"
     }

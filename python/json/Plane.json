@@ -21,7 +21,20 @@
       "type":"float"
     }
   ],
-  "constants":[],
+  "constants":[
+    {
+      "name":"PLANE_YZ",
+      "value":"Plane( 1, 0, 0, 0 )"
+    },
+    {
+      "name":"PLANE_XZ",
+      "value":"Plane( 0, 1, 0, 0 )"
+    },
+    {
+      "name":"PLANE_XY",
+      "value":"Plane( 0, 0, 1, 0 )"
+    }
+  ],
   "methods":[
     {
       "returns":"Vector3",

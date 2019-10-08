@@ -1,5 +1,10 @@
 {
-  "members":[],
+  "members":[
+    {
+      "name":"border_color",
+      "type":"Color"
+    }
+  ],
   "constants":[],
   "methods":[],
   "name":"ReferenceRect",

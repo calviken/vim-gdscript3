@@ -1,6 +1,10 @@
 {
   "members":[
     {
+      "name":"data",
+      "type":"PoolByteArray"
+    },
+    {
       "name":"format",
       "type":"AudioStreamSample.Format"
     },
@@ -55,9 +59,25 @@
       "name":"LOOP_PING_PONG",
       "value":"2",
       "type":"LoopMode"
+    },
+    {
+      "name":"LOOP_BACKWARD",
+      "value":"3",
+      "type":"LoopMode"
     }
   ],
-  "methods":[],
+  "methods":[
+    {
+      "returns":"int",
+      "name":"save_to_wav",
+      "args":[
+        {
+          "name":"path",
+          "type":"String"
+        }
+      ]
+    }
+  ],
   "name":"AudioStreamSample",
   "inherits":"AudioStream"
 }

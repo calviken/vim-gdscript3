@@ -1,0 +1,7 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeScalarInterp",
+  "inherits":"VisualShaderNode"
+}

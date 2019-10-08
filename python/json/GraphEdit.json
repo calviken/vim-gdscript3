@@ -111,6 +111,10 @@
       "qualifiers":"const"
     },
     {
+      "returns":"HBoxContainer",
+      "name":"get_zoom_hbox"
+    },
+    {
       "returns":"bool",
       "name":"is_node_connected",
       "args":[
@@ -178,6 +182,32 @@
         {
           "name":"type",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_connection_activity",
+      "args":[
+        {
+          "name":"from",
+          "type":"String"
+        },
+        {
+          "name":"from_port",
+          "type":"int"
+        },
+        {
+          "name":"to",
+          "type":"String"
+        },
+        {
+          "name":"to_port",
+          "type":"int"
+        },
+        {
+          "name":"amount",
+          "type":"float"
         }
       ]
     },

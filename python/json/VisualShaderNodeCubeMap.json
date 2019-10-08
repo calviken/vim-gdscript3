@@ -1,0 +1,32 @@
+{
+  "members":[
+    {
+      "name":"cube_map",
+      "type":"CubeMap"
+    },
+    {
+      "name":"texture_type",
+      "type":"VisualShaderNodeCubeMap.TextureType"
+    }
+  ],
+  "constants":[
+    {
+      "name":"TYPE_DATA",
+      "value":"0",
+      "type":"TextureType"
+    },
+    {
+      "name":"TYPE_COLOR",
+      "value":"1",
+      "type":"TextureType"
+    },
+    {
+      "name":"TYPE_NORMALMAP",
+      "value":"2",
+      "type":"TextureType"
+    }
+  ],
+  "methods":[],
+  "name":"VisualShaderNodeCubeMap",
+  "inherits":"VisualShaderNode"
+}

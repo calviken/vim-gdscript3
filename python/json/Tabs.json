@@ -5,6 +5,10 @@
       "type":"int"
     },
     {
+      "name":"drag_to_rearrange_enabled",
+      "type":"bool"
+    },
+    {
       "name":"scrolling_enabled",
       "type":"bool"
     },
@@ -92,6 +96,11 @@
       "qualifiers":"const"
     },
     {
+      "returns":"bool",
+      "name":"get_select_with_rmb",
+      "qualifiers":"const"
+    },
+    {
       "returns":"int",
       "name":"get_tab_count",
       "qualifiers":"const"
@@ -146,6 +155,11 @@
       ]
     },
     {
+      "returns":"int",
+      "name":"get_tabs_rearrange_group",
+      "qualifiers":"const"
+    },
+    {
       "returns":"void",
       "name":"move_tab",
       "args":[
@@ -166,6 +180,16 @@
         {
           "name":"tab_idx",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_select_with_rmb",
+      "args":[
+        {
+          "name":"enabled",
+          "type":"bool"
         }
       ]
     },
@@ -208,6 +232,16 @@
         {
           "name":"title",
           "type":"String"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_tabs_rearrange_group",
+      "args":[
+        {
+          "name":"group_id",
+          "type":"int"
         }
       ]
     }

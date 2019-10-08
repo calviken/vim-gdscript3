@@ -1,0 +1,12 @@
+{
+  "members":[
+    {
+      "name":"uniform_name",
+      "type":"String"
+    }
+  ],
+  "constants":[],
+  "methods":[],
+  "name":"VisualShaderNodeUniform",
+  "inherits":"VisualShaderNode"
+}

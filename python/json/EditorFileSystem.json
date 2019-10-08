@@ -54,6 +54,10 @@
           "type":"String"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"update_script_classes"
     }
   ],
   "name":"EditorFileSystem",

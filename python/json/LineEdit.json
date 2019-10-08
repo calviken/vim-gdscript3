@@ -17,6 +17,10 @@
       "type":"int"
     },
     {
+      "name":"clear_button_enabled",
+      "type":"bool"
+    },
+    {
       "name":"context_menu_enabled",
       "type":"bool"
     },
@@ -47,6 +51,10 @@
     {
       "name":"secret",
       "type":"bool"
+    },
+    {
+      "name":"secret_character",
+      "type":"String"
     },
     {
       "name":"text",

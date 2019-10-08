@@ -29,6 +29,11 @@
         {
           "name":"base64_str",
           "type":"String"
+        },
+        {
+          "name":"allow_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     },
@@ -59,6 +64,11 @@
         {
           "name":"variant",
           "type":"Variant"
+        },
+        {
+          "name":"full_objects",
+          "type":"bool",
+          "default":"false"
         }
       ]
     }

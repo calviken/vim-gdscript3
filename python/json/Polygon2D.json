@@ -5,8 +5,16 @@
       "type":"bool"
     },
     {
+      "name":"bones",
+      "type":"Array"
+    },
+    {
       "name":"color",
       "type":"Color"
+    },
+    {
+      "name":"internal_vertex_count",
+      "type":"int"
     },
     {
       "name":"invert_border",
@@ -23,6 +31,14 @@
     {
       "name":"polygon",
       "type":"PoolVector2Array"
+    },
+    {
+      "name":"polygons",
+      "type":"Array"
+    },
+    {
+      "name":"skeleton",
+      "type":"NodePath"
     },
     {
       "name":"texture",
@@ -54,7 +70,91 @@
     }
   ],
   "constants":[],
-  "methods":[],
+  "methods":[
+    {
+      "returns":"void",
+      "name":"add_bone",
+      "args":[
+        {
+          "name":"path",
+          "type":"NodePath"
+        },
+        {
+          "name":"weights",
+          "type":"PoolRealArray"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"clear_bones"
+    },
+    {
+      "returns":"void",
+      "name":"erase_bone",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"get_bone_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"NodePath",
+      "name":"get_bone_path",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"PoolRealArray",
+      "name":"get_bone_weights",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_bone_path",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        },
+        {
+          "name":"path",
+          "type":"NodePath"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_bone_weights",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        },
+        {
+          "name":"weights",
+          "type":"PoolRealArray"
+        }
+      ]
+    }
+  ],
   "name":"Polygon2D",
   "inherits":"Node2D"
 }

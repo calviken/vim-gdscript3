@@ -21,7 +21,8 @@
         },
         {
           "name":"id",
-          "type":"int"
+          "type":"int",
+          "default":"-1"
         }
       ]
     },
@@ -71,6 +72,17 @@
       "args":[
         {
           "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"int",
+      "name":"get_item_index",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"id",
           "type":"int"
         }
       ]

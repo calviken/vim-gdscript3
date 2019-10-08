@@ -40,6 +40,11 @@
       "qualifiers":"const"
     },
     {
+      "returns":"CanvasItem",
+      "name":"get_current_item_drawn",
+      "qualifiers":"const"
+    },
+    {
       "returns":"float",
       "name":"get_margin",
       "qualifiers":"const",

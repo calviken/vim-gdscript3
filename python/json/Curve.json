@@ -75,6 +75,11 @@
     },
     {
       "returns":"int",
+      "name":"get_point_count",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"int",
       "name":"get_point_left_mode",
       "qualifiers":"const",
       "args":[

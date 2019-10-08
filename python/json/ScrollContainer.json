@@ -1,6 +1,10 @@
 {
   "members":[
     {
+      "name":"scroll_deadzone",
+      "type":"int"
+    },
+    {
       "name":"scroll_horizontal",
       "type":"int"
     },
@@ -18,7 +22,16 @@
     }
   ],
   "constants":[],
-  "methods":[],
+  "methods":[
+    {
+      "returns":"HScrollBar",
+      "name":"get_h_scrollbar"
+    },
+    {
+      "returns":"VScrollBar",
+      "name":"get_v_scrollbar"
+    }
+  ],
   "name":"ScrollContainer",
   "inherits":"Container"
 }

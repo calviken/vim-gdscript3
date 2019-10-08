@@ -72,7 +72,7 @@
       "name":"clear"
     },
     {
-      "returns":"Object",
+      "returns":"TreeItem",
       "name":"create_item",
       "args":[
         {

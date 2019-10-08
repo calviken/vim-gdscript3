@@ -8,12 +8,12 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
     {
-      "returns":"var",
+      "returns":"Variant",
       "name":"back"
     },
     {
@@ -22,7 +22,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         },
         {
           "name":"before",
@@ -37,7 +37,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         },
         {
           "name":"obj",
@@ -64,13 +64,20 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
     {
       "returns":"Array",
-      "name":"duplicate"
+      "name":"duplicate",
+      "args":[
+        {
+          "name":"deep",
+          "type":"bool",
+          "default":"False"
+        }
+      ]
     },
     {
       "returns":"bool",
@@ -82,7 +89,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
@@ -92,7 +99,7 @@
       "args":[
         {
           "name":"what",
-          "type":"var"
+          "type":"Variant"
         },
         {
           "name":"from",
@@ -107,12 +114,12 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
     {
-      "returns":"var",
+      "returns":"Variant",
       "name":"front"
     },
     {
@@ -121,7 +128,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
@@ -139,7 +146,7 @@
         },
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
@@ -148,11 +155,19 @@
       "name":"invert"
     },
     {
-      "returns":"var",
+      "returns":"Variant",
+      "name":"max"
+    },
+    {
+      "returns":"Variant",
+      "name":"min"
+    },
+    {
+      "returns":"Variant",
       "name":"pop_back"
     },
     {
-      "returns":"var",
+      "returns":"Variant",
       "name":"pop_front"
     },
     {
@@ -161,7 +176,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
@@ -171,7 +186,7 @@
       "args":[
         {
           "name":"value",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },
@@ -201,7 +216,7 @@
       "args":[
         {
           "name":"what",
-          "type":"var"
+          "type":"Variant"
         },
         {
           "name":"from",
@@ -209,6 +224,10 @@
           "default":"-1"
         }
       ]
+    },
+    {
+      "returns":"void",
+      "name":"shuffle"
     },
     {
       "returns":"int",

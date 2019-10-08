@@ -3,6 +3,10 @@
   "constants":[],
   "methods":[
     {
+      "returns":"Array",
+      "name":"get_buttons"
+    },
+    {
       "returns":"BaseButton",
       "name":"get_pressed_button"
     }

@@ -8,19 +8,41 @@
     },
     {
       "returns":"Dictionary",
-      "name":"duplicate"
+      "name":"duplicate",
+      "args":[
+        {
+          "name":"deep",
+          "type":"bool",
+          "default":"False"
+        }
+      ]
     },
     {
       "returns":"bool",
       "name":"empty"
     },
     {
-      "returns":"void",
+      "returns":"bool",
       "name":"erase",
       "args":[
         {
           "name":"key",
-          "type":"var"
+          "type":"Variant"
+        }
+      ]
+    },
+    {
+      "returns":"Variant",
+      "name":"get",
+      "args":[
+        {
+          "name":"key",
+          "type":"Variant"
+        },
+        {
+          "name":"default",
+          "type":"Variant",
+          "default":"Null"
         }
       ]
     },
@@ -30,7 +52,7 @@
       "args":[
         {
           "name":"key",
-          "type":"var"
+          "type":"Variant"
         }
       ]
     },

@@ -1,0 +1,7 @@
+{
+  "members":[],
+  "constants":[],
+  "methods":[],
+  "name":"ResourceFormatLoaderDynamicFont",
+  "inherits":"ResourceFormatLoader"
+}

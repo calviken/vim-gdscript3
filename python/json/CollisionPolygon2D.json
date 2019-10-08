@@ -13,6 +13,10 @@
       "type":"bool"
     },
     {
+      "name":"one_way_collision_margin",
+      "type":"float"
+    },
+    {
       "name":"polygon",
       "type":"PoolVector2Array"
     }

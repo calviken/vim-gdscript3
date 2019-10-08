@@ -24,8 +24,28 @@
     },
     {
       "returns":"PoolStringArray",
-      "name":"get_favorite_dirs",
+      "name":"get_favorites",
       "qualifiers":"const"
+    },
+    {
+      "returns":"Variant",
+      "name":"get_project_metadata",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"section",
+          "type":"String"
+        },
+        {
+          "name":"key",
+          "type":"String"
+        },
+        {
+          "name":"default",
+          "type":"Variant",
+          "default":"null"
+        }
+      ]
     },
     {
       "returns":"String",
@@ -86,7 +106,7 @@
     },
     {
       "returns":"void",
-      "name":"set_favorite_dirs",
+      "name":"set_favorites",
       "args":[
         {
           "name":"dirs",
@@ -109,6 +129,24 @@
         {
           "name":"update_current",
           "type":"bool"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_project_metadata",
+      "args":[
+        {
+          "name":"section",
+          "type":"String"
+        },
+        {
+          "name":"key",
+          "type":"String"
+        },
+        {
+          "name":"data",
+          "type":"Variant"
         }
       ]
     },

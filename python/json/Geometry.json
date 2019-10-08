@@ -213,6 +213,28 @@
       ]
     },
     {
+      "returns":"Variant",
+      "name":"line_intersects_line_2d",
+      "args":[
+        {
+          "name":"from_a",
+          "type":"Vector2"
+        },
+        {
+          "name":"dir_a",
+          "type":"Vector2"
+        },
+        {
+          "name":"from_b",
+          "type":"Vector2"
+        },
+        {
+          "name":"dir_b",
+          "type":"Vector2"
+        }
+      ]
+    },
+    {
       "returns":"Dictionary",
       "name":"make_atlas",
       "args":[

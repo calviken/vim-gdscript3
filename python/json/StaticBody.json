@@ -15,6 +15,10 @@
     {
       "name":"friction",
       "type":"float"
+    },
+    {
+      "name":"physics_material_override",
+      "type":"PhysicsMaterial"
     }
   ],
   "constants":[],

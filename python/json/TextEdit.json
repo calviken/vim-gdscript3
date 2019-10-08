@@ -1,6 +1,10 @@
 {
   "members":[
     {
+      "name":"breakpoint_gutter",
+      "type":"bool"
+    },
+    {
       "name":"caret_blink",
       "type":"bool"
     },
@@ -61,7 +65,7 @@
       "type":"float"
     },
     {
-      "name":"wrap_lines",
+      "name":"wrap_enabled",
       "type":"bool"
     }
   ],
@@ -112,8 +116,13 @@
       "type":"MenuItems"
     },
     {
-      "name":"MENU_MAX",
+      "name":"MENU_REDO",
       "value":"6",
+      "type":"MenuItems"
+    },
+    {
+      "name":"MENU_MAX",
+      "value":"7",
       "type":"MenuItems"
     }
   ],
@@ -220,6 +229,11 @@
           "name":"can_be_hidden",
           "type":"bool",
           "default":"true"
+        },
+        {
+          "name":"wrap_index",
+          "type":"int",
+          "default":"0"
         }
       ]
     },
@@ -242,6 +256,22 @@
         {
           "name":"line",
           "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"Array",
+      "name":"get_breakpoints",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Color",
+      "name":"get_keyword_color",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"keyword",
+          "type":"String"
         }
       ]
     },
@@ -297,6 +327,17 @@
       "qualifiers":"const"
     },
     {
+      "returns":"bool",
+      "name":"has_keyword_color",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"keyword",
+          "type":"String"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"insert_text_at_cursor",
       "args":[
@@ -350,6 +391,10 @@
     {
       "returns":"void",
       "name":"redo"
+    },
+    {
+      "returns":"void",
+      "name":"remove_breakpoints"
     },
     {
       "returns":"PoolIntArray",

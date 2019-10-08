@@ -19,6 +19,11 @@
         {
           "name":"image",
           "type":"Image"
+        },
+        {
+          "name":"threshold",
+          "type":"float",
+          "default":"0.1"
         }
       ]
     },
@@ -45,6 +50,36 @@
     },
     {
       "returns":"void",
+      "name":"grow_mask",
+      "args":[
+        {
+          "name":"pixels",
+          "type":"int"
+        },
+        {
+          "name":"rect",
+          "type":"Rect2"
+        }
+      ]
+    },
+    {
+      "returns":"Array",
+      "name":"opaque_to_polygons",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"rect",
+          "type":"Rect2"
+        },
+        {
+          "name":"epsilon",
+          "type":"float",
+          "default":"2.0"
+        }
+      ]
+    },
+    {
+      "returns":"void",
       "name":"set_bit",
       "args":[
         {
@@ -62,7 +97,7 @@
       "name":"set_bit_rect",
       "args":[
         {
-          "name":"p_rect",
+          "name":"rect",
           "type":"Rect2"
         },
         {

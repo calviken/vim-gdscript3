@@ -137,8 +137,13 @@
       "type":"Monitor"
     },
     {
-      "name":"MONITOR_MAX",
+      "name":"AUDIO_OUTPUT_LATENCY",
       "value":"27",
+      "type":"Monitor"
+    },
+    {
+      "name":"MONITOR_MAX",
+      "value":"28",
       "type":"Monitor"
     }
   ],

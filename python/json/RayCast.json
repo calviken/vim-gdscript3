@@ -5,6 +5,14 @@
       "type":"Vector3"
     },
     {
+      "name":"collide_with_areas",
+      "type":"bool"
+    },
+    {
+      "name":"collide_with_bodies",
+      "type":"bool"
+    },
+    {
       "name":"collision_mask",
       "type":"int"
     },

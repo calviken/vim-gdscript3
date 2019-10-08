@@ -5,6 +5,10 @@
       "type":"BaseButton.ActionMode"
     },
     {
+      "name":"button_mask",
+      "type":"int"
+    },
+    {
       "name":"disabled",
       "type":"bool"
     },
@@ -23,6 +27,10 @@
     {
       "name":"shortcut",
       "type":"ShortCut"
+    },
+    {
+      "name":"shortcut_in_tooltip",
+      "type":"bool"
     },
     {
       "name":"toggle_mode",
@@ -48,6 +56,11 @@
     {
       "name":"DRAW_DISABLED",
       "value":"3",
+      "type":"DrawMode"
+    },
+    {
+      "name":"DRAW_HOVER_PRESSED",
+      "value":"4",
       "type":"DrawMode"
     },
     {

@@ -26,7 +26,7 @@
       ]
     },
     {
-      "returns":"Variant",
+      "returns":"Array",
       "name":"collide_and_get_contacts",
       "args":[
         {
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "returns":"Variant",
+      "returns":"Array",
       "name":"collide_with_motion_and_get_contacts",
       "args":[
         {

@@ -64,6 +64,28 @@
     },
     {
       "returns":"String",
+      "name":"get_file_script_class_extends",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"String",
+      "name":"get_file_script_class_name",
+      "qualifiers":"const",
+      "args":[
+        {
+          "name":"idx",
+          "type":"int"
+        }
+      ]
+    },
+    {
+      "returns":"String",
       "name":"get_file_type",
       "qualifiers":"const",
       "args":[

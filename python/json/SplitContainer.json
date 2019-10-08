@@ -30,7 +30,12 @@
       "type":"DraggerVisibility"
     }
   ],
-  "methods":[],
+  "methods":[
+    {
+      "returns":"void",
+      "name":"clamp_split_offset"
+    }
+  ],
   "name":"SplitContainer",
   "inherits":"Container"
 }

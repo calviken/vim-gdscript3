@@ -19,10 +19,6 @@
         {
           "name":"triangles",
           "type":"TriangleMesh"
-        },
-        {
-          "name":"bounds",
-          "type":"AABB"
         }
       ]
     },
@@ -33,6 +29,10 @@
         {
           "name":"handles",
           "type":"PoolVector3Array"
+        },
+        {
+          "name":"material",
+          "type":"Material"
         },
         {
           "name":"billboard",
@@ -81,6 +81,11 @@
         {
           "name":"skeleton",
           "type":"RID"
+        },
+        {
+          "name":"material",
+          "type":"Material",
+          "default":"null"
         }
       ]
     },
@@ -146,6 +151,27 @@
       ]
     },
     {
+      "returns":"EditorSpatialGizmoPlugin",
+      "name":"get_plugin",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"Spatial",
+      "name":"get_spatial_node",
+      "qualifiers":"const"
+    },
+    {
+      "returns":"bool",
+      "name":"is_handle_highlighted",
+      "qualifiers":"virtual",
+      "args":[
+        {
+          "name":"index",
+          "type":"int"
+        }
+      ]
+    },
+    {
       "returns":"void",
       "name":"redraw",
       "qualifiers":"virtual"
@@ -166,6 +192,16 @@
         {
           "name":"point",
           "type":"Vector2"
+        }
+      ]
+    },
+    {
+      "returns":"void",
+      "name":"set_hidden",
+      "args":[
+        {
+          "name":"hidden",
+          "type":"bool"
         }
       ]
     },
