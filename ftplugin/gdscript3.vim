@@ -1,3 +1,5 @@
+setloacl shiftwidth=4 " set tabs size to fit godot default scripts
+setloacl softtabstop=4
 setlocal commentstring=#\ %s
 
 if exists("g:gdscript3_loaded")
